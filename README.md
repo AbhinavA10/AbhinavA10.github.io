@@ -7,6 +7,25 @@ My Personal Website, and some documentation for future use
 - add carousel for each project
 - minify js when done --> https://www.minifier.org/
 
+### Supposed Sitemap
+
+Index page
+ - about me
+ - past employment
+
+
+hardware
+- chrp3 and ubmp remote control each other
+- robotic hand
+- ps2 remote interface, and wheels
+- gramophone
+
+Software
+- dont give up game
+- grade 11 libgdx game protoype
+- twitter Bot
+- reshape reality window frame game
+
 ## Sources
 
 ### Typed.js
