@@ -5,7 +5,9 @@ My Personal Website, and some documentation for future use
 - use agency theme for Website, have the project pop-ups like they are, but make separate pages for hardware vs software
 - make better favicon.ico/logo
 - add carousel for each project
+- add bootstrap.js CDN properly from test.html to hardware.html
 - minify js when done --> https://www.minifier.org/
+- folio template can be used for blog and contact structure
 
 ### Supposed Sitemap
 
@@ -14,7 +16,7 @@ Index page
  - past employment
 
 
-hardware
+Hardware
 - chrp3 and ubmp remote control each other
 - robotic hand
 - ps2 remote interface, and wheels
@@ -27,6 +29,8 @@ Software
 - reshape reality window frame game
 
 ## Sources
+- [Carousel](https://www.w3schools.com/bootstrap/bootstrap_carousel.asp)
+- [Carousel2](https://getbootstrap.com/docs/4.0/components/carousel/)
 
 ### Typed.js
 I used typed.js for the typewriting effect on the home page.
