@@ -1,13 +1,16 @@
 # AbhinavA10
-My Personal Website, and some documentation for future use
+My Personal Website, and some documentation for future use.
+I chose to use bootstrap as it takes care of most of the css required to scale my site to mobile.
 
 ## Todo
-- use agency theme for Website, have the project pop-ups like they are, but make separate pages for hardware vs software
 - make better favicon.ico/logo
 - add carousel for each project
-- add bootstrap.js CDN properly from test.html to hardware.html
-- minify js when done --> https://www.minifier.org/
 - folio template can be used for blog and contact structure
+- spread chevrons out in carousel
+- need schematic for ps2 and gramophone projects
+- need technical report for ps2 project
+- carousel caption --  appear too high up on picture, and aren't very readable
+- carousel indicators disappear on images
 
 ### Supposed Sitemap
 
@@ -15,22 +18,28 @@ Index page
  - about me
  - past employment
 
-
 Hardware
-- chrp3 and ubmp remote control each other
+- edge sensing robot
+- sumo fighting robot
+- message wand
+- CHRP3 and UBMP RC Interface
 - robotic hand
-- ps2 remote interface, and wheels
-- gramophone
+- asm programs for CHRP3
+- Music-syncing Gramophone
+- PS2 Controller Interface
 
 Software
 - dont give up game
+- Battlecode
 - grade 11 libgdx game protoype
 - twitter Bot
 - reshape reality window frame game
 
+
 ## Sources
 - [Carousel](https://www.w3schools.com/bootstrap/bootstrap_carousel.asp)
-- [Carousel2](https://getbootstrap.com/docs/4.0/components/carousel/)
+- [Carousel2](https://getbootstrap.com/docs/4.1/components/carousel/)
+- [Changing Chevron Colour for Carousel](https://stackoverflow.com/questions/49391266/change-bootstrap-4-carousel-control-colors/49391884)
 
 ### Typed.js
 I used typed.js for the typewriting effect on the home page.
