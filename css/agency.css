@@ -50,7 +50,14 @@ section h3.section-subheading {
   text-transform: none;
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
+section h3.section-subheading-index {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 @media (min-width: 768px) {
   section {
     padding: 150px 0;
