@@ -1,21 +1,23 @@
-# AbhinavA10
+# AbhinavA10.github.io
 My Personal Website, and some documentation for future use.
 I chose to use bootstrap as it takes care of most of the css required to scale my site to mobile.
 
-## Todo
-- make better favicon.ico/logo
-- add carousel for each project
-- folio template can be used for blog and contact structure
-- spread chevrons out in carousel
-- need schematic for ps2 and gramophone projects
-- need technical report for ps2 project
-- carousel caption --  appear too high up on picture, and aren't very readable
-- carousel indicators disappear on images
+## Todo and Issues
+- [] make better favicon.ico/logo
+- [] add carousel for each project
+- [] folio template can be used for blog and contact structure
+- [] spread chevrons out in carousel
+- [] need schematic for ps2 and gramophone projects
+- [] need technical report for ps2 project
+- [] carousel caption --  appear too high up on picture, and aren't very readable
+- [] carousel indicators disappear on images
+- [] carousel indicators block play button of video, may have to double tap to fullscreen video to be able to play?
+- [] fix big gap on index.html 
 
-### Supposed Sitemap
+### Planned Sitemap
+The following are still left to do:
 
 Index page
- - about me
  - past employment
 
 Hardware
@@ -47,8 +49,8 @@ I used typed.js for the typewriting effect on the home page.
 Tutorial [here](https://www.youtube.com/watch?v=Jed5ZasNtJM)
 
 ### Favicon.ico
-For the little icon in the tab/bookmarks
-How to [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
+For the little icon in the tab/bookmarks: 
+How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 
 # [Start Bootstrap - Agency](https://startbootstrap.com/template-overviews/agency/)
 
