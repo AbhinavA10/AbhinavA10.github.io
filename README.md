@@ -4,14 +4,16 @@ I chose to use bootstrap as it takes care of most of the css required to scale m
 
 ## Todo and Issues
 - [ ] make better favicon.ico/logo
-- [ ] add carousel for each project
 - [ ] folio template can be used for blog and contact structure
 - [ ] spread chevrons out in carousel
 - [ ] add screenshots of hinge stl files for gramophone project
 - [ ] carousel caption --  appear too high up on picture, and aren't very readable
 - [ ] carousel indicators disappear on images
 - [ ] carousel indicators block play button of video, may have to double tap to fullscreen video to be able to play?
+- [ ] add videos from youtube instead?
 - [ ] fix big gap on index.html - seems to be a joint of two different section/colours
+- [x] fix image size on robotic hand modal
+- [ ] add padding above modal description
 - [x] find and add video of robotic hand
 - [x] trim pcb videos
 
@@ -22,14 +24,12 @@ Index page
  - past employment
 
 Hardware
-- edge sensing robot
-- sumo fighting robot
-- message wand
-- CHRP3 and UBMP RC Interface
-- robotic hand
-- asm programs for CHRP3
-- Music-syncing Gramophone
-- PS2 Controller Interface
+- [ ] sumo fighting robot
+- [ ] message wand
+- [ ] CHRP3 and UBMP RC Interface
+- [ ] robotic hand
+- [x] Music-syncing Gramophone
+- [ ] PS2 Controller Interface
 
 Software
 - dont give up game

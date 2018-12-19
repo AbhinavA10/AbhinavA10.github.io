@@ -174,7 +174,7 @@ img::-moz-selection {
   }
 }
 
-header.masthead {
+header.masthead { /*duplicate this class to add other bg images on other landings*/
   text-align: center;
   color: white;
   background-image: url("../img/header-bg.jpg");
@@ -188,7 +188,7 @@ header.masthead {
 }
 
 header.masthead .intro-text {
-  padding-top: 150px;
+  padding-top: 150px; /*not sure*/
   padding-bottom: 100px;
 }
 
@@ -212,6 +212,10 @@ header.masthead .intro-text .intro-heading {
   header.masthead .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
+  }
+  header.masthead .landing-smaller {
+    padding-top: 150px;
+    padding-bottom: 100px; /*these change the big landing portion on a page*/
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
@@ -714,4 +718,15 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .vidPortfolio{
   overflow: hidden;
+  
+  width:16vw;
+}
+p.portfolio-description{
+  text-align: left;
+  text-indent: 50px;
+}
+
+img.portfolioImgWide{
+ /* height:9vw;*/
+  width:16vw;
 }
