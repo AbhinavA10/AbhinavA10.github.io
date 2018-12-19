@@ -3,16 +3,17 @@ My Personal Website, and some documentation for future use.
 I chose to use bootstrap as it takes care of most of the css required to scale my site to mobile.
 
 ## Todo and Issues
-- [] make better favicon.ico/logo
-- [] add carousel for each project
-- [] folio template can be used for blog and contact structure
-- [] spread chevrons out in carousel
-- [] need schematic for ps2 and gramophone projects
-- [] need technical report for ps2 project
-- [] carousel caption --  appear too high up on picture, and aren't very readable
-- [] carousel indicators disappear on images
-- [] carousel indicators block play button of video, may have to double tap to fullscreen video to be able to play?
-- [] fix big gap on index.html 
+- [ ] make better favicon.ico/logo
+- [ ] add carousel for each project
+- [ ] folio template can be used for blog and contact structure
+- [ ] spread chevrons out in carousel
+- [ ] add screenshots of hinge stl files for gramophone project
+- [ ] carousel caption --  appear too high up on picture, and aren't very readable
+- [ ] carousel indicators disappear on images
+- [ ] carousel indicators block play button of video, may have to double tap to fullscreen video to be able to play?
+- [ ] fix big gap on index.html - seems to be a joint of two different section/colours
+- [x] find and add video of robotic hand
+- [x] trim pcb videos
 
 ### Planned Sitemap
 The following are still left to do:
