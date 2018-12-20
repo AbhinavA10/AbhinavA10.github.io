@@ -1,6 +1,6 @@
 # AbhinavA10.github.io
 My Personal Website, and some documentation for future use.
-I chose to use bootstrap as it takes care of most of the css required to scale my site to mobile.
+I chose to use bootstrap as it helps implement most of the css required to scale my site to mobile.
 
 ## Todo and Issues
 - [ ] make better favicon.ico/logo
@@ -12,14 +12,18 @@ I chose to use bootstrap as it takes care of most of the css required to scale m
 - [x] add ps2 videos seperately from carousel
 - [x] fix big gap on index.html - seems to be a joint of two different section/colours
 - [ ] find proper video size for phone scaling (robotic hand video)
+- [ ] update media CSS tags
 - [x] add padding above modal description
 - [x] find and add video of robotic hand
 - [x] trim pcb videos
 - [ ] add past employment using JSON instead
-- [ ] add hand stl files screenshots to modal
-- [ ] add hinge screenshot to gramo modal
-- [ ] add google analytics
+- [ ] add hand stl files screenshots to modal - gifs
+- [x] add hinge to gramo modal - gifs
+- [x] add google analytics
 - [x] ps2 module wont pop up
+- [x] add poster for videos
+- [x] rename PNG, github seems to mix and match
+- [ ] Possibly use [this](https://www.w3schools.com/bootstrap/bootstrap_filters.asp) to make searchable portfolio
 
 ### Planned Sitemap
 The following are still left to do:
@@ -33,8 +37,8 @@ Hardware
 - [ ] CHRP3 and UBMP RC Interface
 - [x] robotic hand
 - [x] Music-syncing Gramophone
-	- carousel indicators are at bottom of page???
-- [ ] PS2 Controller Interface
+	- [ ] carousel indicators are at bottom of page???
+- [x] PS2 Controller Interface
 
 Software
 - dont give up game

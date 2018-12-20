@@ -730,3 +730,8 @@ img.portfolioImgWide{
  /* height:9vw;*/
   width:16vw;
 }
+/*
+The @media tags allow to target specific devices based on size etc.
+https://www.htmlgoodies.com/beyond/css/targeting-specific-devices-in-your-style-sheets.html
+
+*/
