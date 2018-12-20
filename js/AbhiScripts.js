@@ -1,9 +1,8 @@
-
+$(document).ready(function() {
+    
   // ========================================================================= //
   //  Typed Js
   // ========================================================================= //
-$(document).ready(function() {
-    //your code here
   var typed = new Typed('#typed', {
     stringsElement: '#typed-strings',
     	typeSpeed: 75, //type speed in milliseconds
@@ -13,5 +12,45 @@ $(document).ready(function() {
     	loop: true, //loop strings
     	loopCount: Infinity,//amount of loops
   });
+  // ========================================================================= //
+  //  JSON for Past empolyment Typed Js
+  // ========================================================================= //
+  /*
+  function loadJSON(path, callback) {
 
+      var xobj = new XMLHttpRequest();
+      xobj.overrideMimeType("application/json");
+      xobj.open('GET', path, true);
+      xobj.onreadystatechange = function() {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+              callback(xobj.responseText);
+          }
+      };
+      xobj.send(null);
+  }
+
+  function handlePastEmployment(info) {
+      var pastemployment = JSON.parse(info)['pastemployment'];
+      var employmentdiv = document.getElementById("pastemployment");
+      if (!employmentdiv) {
+          return;
+      }
+      for (var i = 0; i < pastemployment.length; i++) {
+          $('<div class="row"> \
+                      <div class="col-md-3 text-center"> \
+                          <a href="' + pastemployment[i]['href'] + '" align="center" class="text-center"><img src=' + pastemployment[i]['img'] + ' alt=' + pastemployment[i]["company"] + ' style="max-width: 70vw; width: 100%; height: 100%;"></a> \
+                      </div> \
+                      <div class="col-md-9"> \
+                          <h2>' + pastemployment[i]["company"] + ': ' + pastemployment[i]["position"] + '</h2> \
+                          <strong>Duration:</strong> \
+                          <p> ' + pastemployment[i]['timeframe'] + '</p> \
+                          <strong>Details:</strong> \
+                          ' + pastemployment[i]['details'].map((info) => {
+                  return "<p>" + info + "</p>" }).join("") +
+              '</div> \
+                  </div>').appendTo(employmentdiv);
+      }
+  }*/
+//your code here
 });
+
