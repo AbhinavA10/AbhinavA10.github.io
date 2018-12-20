@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131211009-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-131211009-1');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -34,13 +42,13 @@
               <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
               <li class="nav-item">
                 <!-- remove JS scroll triger class later -->
-                <a class="nav-link js-scroll-trigger" href="academics.html">Academics</a>
+                <a class="nav-link js-scroll-trigger" href="maintenance.html">Academics</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="hardware.html">Hardware</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="software.html">Software</a>
+                <a class="nav-link js-scroll-trigger" href="maintenance.html">Software</a>
               </li>
             </ul>
           </div>
@@ -440,11 +448,11 @@
                         <br> <br> The technical report for this project can be read <a href="img/portfolio/hand/Technical_Report.pdf" target="_blank">here</a>
                       </p>
                       <p>The video below shows my robotic hand, mimicking the movements of the user wearing the flex-sensor glove I created.</p>
-                      <video class = "d-block w-100 vidPortfolio" preload = "metadata" controls loop>
+                      <video class = "d-block w-100 vidPortfolio" poster="img/portfolio/hand/sensingVidPoster.png" preload = "metadata" controls loop>
                         <source src = "img/portfolio/hand/Flex Sensing.mp4" type = "video/mp4">
                         No support for this video type
                       </video>
-                      <video class = "d-block w-100 vidPortfolio" preload = "metadata" controls loop>
+                      <video class = "d-block w-100 vidPortfolio" poster="img/portfolio/hand/gestureVidPoster.png"  preload = "metadata" controls loop>
                         <source src = "img/portfolio/hand/Gestures.mp4" type = "video/mp4">
                         No support for this video type
                       </video>
@@ -486,19 +494,42 @@
                       <ol class="carousel-indicators">
                         <li data-target="#carouselGramophone" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselGramophone" data-slide-to="1"></li>
+                        <li data-target="#carouselGramophone" data-slide-to="2"></li>
+                        <li data-target="#carouselGramophone" data-slide-to="3"></li>
                       </ol>
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner">
                         <div class="carousel-item active">
-                          <img class="d-block w-100" src="img/portfolio/gramophone/LPFA_schematic.jpg" alt="Chania" style="height:80vh">
+                          <img class="d-block w-100" src="img/portfolio/gramophone/LPFA_schematic.jpg" alt="Schematic of low pass filter" style="height:80vh">
                           <div class="carousel-caption d-none d-md-block">
                             <p>Original Design for the LPFA</p>
                           </div>
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block w-100" src="img/portfolio/gramophone/LPFA_traces.png" alt="Chicago" style="height:80vh">
+                          <!--
+                          <div class = "view">
+                            -->
+                            <img class="d-block w-100" src="img/portfolio/gramophone/LPFA_traces.png" alt="circuit traces" style="height:80vh">
+                            <!--
+                            <div class="mask rgba-black-strong"></div>
+                            -->
+                            <!--
+                          </div>
+                          -->
                           <div class="carousel-caption d-none d-md-block">
                             <p>Circuit traces of the LPFA board</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="img/portfolio/gramophone/Hinge1.gif" alt="GIF of STL file" style="height:80vh">
+                          <div class="carousel-caption d-none d-md-block">
+                            <p>Hinge - part 1</p>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="img/portfolio/gramophone/Hinge2.gif" alt="Gif of STL file" style="height:80vh">
+                          <div class="carousel-caption d-none d-md-block">
+                            <p>Hinge - part 2</p>
                           </div>
                         </div>
                       </div>
@@ -513,13 +544,18 @@
                       </a>
                     </div>
                     <div class= "portfolio-description">
-                      <p>Using the RAINBO board, my team and I designed a circuit to sync the flashing of multiple LED strips to the bass channel of any song. We designed a Low-pass filter and amplifier circuit (dubbed "LPFA") using circuits.io (now deprecated). The RAINBO board accepts an analog value (output from LPFA board), adds it to the most recent ones. The top 4 values of the 10 most recent ones are averaged, and the output is the number of LEDs that are lit up.</p>
-                      <video class = "d-block w-100 vidPortfolio" preload = "metadata" controls loop>
+                      <p>
+                        Using the RAINBO board, my team and I designed a circuit to sync the flashing of multiple LED strips to the bass channel of any song. We designed a Low-pass filter and amplifier circuit (dubbed "LPFA") using circuits.io (now deprecated). The RAINBO board accepts an analog value (output from LPFA board), adds it to the most recent ones. The top 4 values of the 10 most recent ones are averaged, and the output is the number of LEDs that are lit up.
+                      </p>
+                      <p>
+                        During this project, I also created 3D printable hinges, as we were originally planning on having petals open and close at the top of the gramophone.
+                      </p>
+                      <video class = "d-block w-100 vidPortfolio" poster="img/portfolio/gramophone/darkVidPoster.png" preload = "metadata" controls loop>
                         <source src = "img/portfolio/gramophone/Gramophone_night.mp4" type = "video/mp4">
                         No support for this video type
                       </video>
                       <p>Above is a demo video of the gramophone display, flashing in sync with the song "Ed Sheeran - Shape of You".</p>
-                      <video class = "d-block w-100 vidPortfolio"  preload = "metadata" controls loop>
+                      <video class = "d-block w-100 vidPortfolio" poster="img/portfolio/gramophone/dayVidPoster.png" preload = "metadata" controls loop>
                         <source src = "img/portfolio/gramophone/Gramophone_day.mp4" type = "video/mp4">
                         No support for this video type
                       </video>
@@ -666,27 +702,27 @@
                       <p>The end-goal was to control an RC car, using a PS2 controller. Currently, this project consists of sending and receiving data between a PS2 Controller, and a PIC microcontroller. I created this PCB to do so. After designing it, my teacher and I transfered the trace onto a piece of copper and etched the rest away with acid.</p>
                       <p>
                         The technical report for this project can be read <a href="img/portfolio/ps2/PS2_Interface_Report.pdf" target="_blank">here</a>
-                      </p> 
+                      </p>
                       <p>
                         Since this is a one-sided board, I needed some external jumper wires to be able to make some connections.
-                      </p> 
+                      </p>
                       <p>
                         During the time of this project, I had also designed "shock-absorbing wheels". These were 3D printed tires of the RC car, that would also act as suspension. I was inspired by the <a href="https://www.michelintweel.com/" target="_blank"> Michelin airless tires </a>, and decided to model my own version in Fusion 360. By having thin, and splined, spokes, the tire is able to bend towards the center of itself. The results can be seen in the above images.
                       </p>
                       <p>
                         The video below shows the first test of my circuit board after etching the PCB.
                       </p>
-                      <video class = "d-block w-100 vidPortfolio" preload = "metadata" controls loop>
+                      <video class = "d-block w-100 vidPortfolio" poster="img/portfolio/ps2/firstVidPoster.png" preload = "metadata" controls loop>
                         <source src = "img/portfolio/ps2/Test-First.mp4" type = "video/mp4">
                         No support for this video type
                       </video>
                       <p>This next video below is the second test of my PCB interface, where I communicate with the PS2 controller, and sense whether a button is pressed.</p>
-                      <video class = "d-block w-100 vidPortfolio" preload = "metadata" controls loop>
+                      <video class = "d-block w-100 vidPortfolio"  poster="img/portfolio/ps2/secondVidPoster.png" preload = "metadata" controls loop>
                         <source src = "img/portfolio/ps2/Test-Second_Wired PS2 Interface.mp4" type = "video/mp4">
                         No support for this video type
                       </video>
                       <p>The last video shows my PCB interface with the PS2 controller fully working - this includes analogue input from the joystick.</p>
-                      <video class = "d-block w-100 vidPortfolio" preload = "metadata" controls loop>
+                      <video class = "d-block w-100 vidPortfolio"  poster="img/portfolio/ps2/thirdVidPoster.png"preload = "metadata" controls loop>
                         <source src = "img/portfolio/ps2/Test-Third_Wired PS2 Interface - with analog.mp4" type = "video/mp4">
                         No support for this video type
                       </video>
@@ -711,22 +747,24 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <span class="copyright">Created based off the <a href="https://startbootstrap.com/template-overviews/agency/"> Agency Template</a>, using <a href="http://getbootstrap.com/">Bootstrap</a> </span>
+              <span class="copyright">Based off the <a href="https://startbootstrap.com/template-overviews/agency/"> Agency Template</a>, using <a href="http://getbootstrap.com/">Bootstrap</a> </span>
             </div>
             <div class="col-md-4">
               <ul class="list-inline social-buttons">
+                <!--
                 <li class="list-inline-item">
                   <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
+                -->
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/abhiagrahari">
                     <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="#">
+                  <a href="https://github.com/AbhinavA10">
                     <i class="fa fa-github"></i>
                   </a>
                 </li>
@@ -735,10 +773,10 @@
             <div class="col-md-4">
               <ul class="list-inline quicklinks">
                 <li class="list-inline-item">
-                  Right Footer
+                  By: Abhinav Agrahari
                 </li>
                 <li class="list-inline-item">
-                  Rightest Footer
+                  <a href="#">Back To Top</a>
                 </li>
               </ul>
             </div>
