@@ -4,31 +4,36 @@ I chose to use bootstrap as it takes care of most of the css required to scale m
 
 ## Todo and Issues
 - [ ] make better favicon.ico/logo
-- [ ] folio template can be used for blog and contact structure
+- [ ] -folio template can be used for blog and contact structure-
 - [ ] spread chevrons out in carousel
-- [ ] add screenshots of hinge stl files for gramophone project
 - [ ] carousel caption --  appear too high up on picture, and aren't very readable
-- [ ] carousel indicators disappear on images
+- [ ] carousel indicators --> change colours
 - [ ] carousel indicators block play button of video, may have to double tap to fullscreen video to be able to play?
-- [ ] add videos from youtube instead?
-- [ ] fix big gap on index.html - seems to be a joint of two different section/colours
-- [x] fix image size on robotic hand modal
-- [ ] add padding above modal description
+- [x] add ps2 videos seperately from carousel
+- [x] fix big gap on index.html - seems to be a joint of two different section/colours
+- [ ] find proper video size for phone scaling (robotic hand video)
+- [x] add padding above modal description
 - [x] find and add video of robotic hand
 - [x] trim pcb videos
+- [ ] add past employment using JSON instead
+- [ ] add hand stl files screenshots to modal
+- [ ] add hinge screenshot to gramo modal
+- [ ] add google analytics
+- [x] ps2 module wont pop up
 
 ### Planned Sitemap
 The following are still left to do:
 
 Index page
- - past employment
+ - past employment --> use JSON
 
 Hardware
 - [ ] sumo fighting robot
 - [ ] message wand
 - [ ] CHRP3 and UBMP RC Interface
-- [ ] robotic hand
+- [x] robotic hand
 - [x] Music-syncing Gramophone
+	- carousel indicators are at bottom of page???
 - [ ] PS2 Controller Interface
 
 Software

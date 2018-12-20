@@ -60,7 +60,7 @@ section h3.section-subheading-normal {
 }
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding: 50px 0; /*padding between sections*/
   }
 }
 
@@ -718,10 +718,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .vidPortfolio{
   overflow: hidden;
-  
-  width:16vw;
+  padding-bottom: 30px; /*this matches the image padding in a carousel*/
+  width:16vw; /*doesn't show up properly on a phone*/
 }
-p.portfolio-description{
+.portfolio-description{
   text-align: left;
   text-indent: 50px;
 }
