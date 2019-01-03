@@ -13,7 +13,7 @@ $(document).ready(function() {
     	loopCount: Infinity,//amount of loops
   });
   // ========================================================================= //
-  //  JSON for Past empolyment Typed Js
+  //  JSON for Past empolyment Typed Js, from sumobot1
   // ========================================================================= //
   /*
   function loadJSON(path, callback) {
