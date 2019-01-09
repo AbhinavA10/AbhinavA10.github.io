@@ -19,31 +19,25 @@ I chose to use bootstrap as it helps implement most of the css required to scale
 - [x] add hinge to gramo modal - gifs
 - [x] add google analytics
 - [x] ps2 module wont pop up
-- [x] add poster for videos
+- [ ] add poster for all videos
 - [x] rename PNG, github seems to mix and match
-- [ ] For a text-searchable portfolio, use [this](https://www.w3schools.com/bootstrap/bootstrap_filters.asp)
 - [ ] To make a button filterable portfolio, use [this](https://www.w3schools.com/howto/howto_js_filter_elements.asp)
 - [ ] make #portfolioINSERTHERE go directly to the project, try using [this](https://stackoverflow.com/questions/20662429/bootstrap-direct-link-to-modal-window)
+
+## Todo - Unimportant
+- [ ] For a text-searchable portfolio, use [this](https://www.w3schools.com/bootstrap/bootstrap_filters.asp)
 - [ ] use JUSTDOIT as thumbnail for messagewand portfolio instead
 - [ ] incorporate suggestions from google analytics insights
 
 ### Planned Sitemap
 The following are still left to do:
-
-Hardware
-- [ ] sumo fighting robot
-- [ ] message wand
-- [x] CHRP3 and UBMP RC Interface
-- [x] robotic hand
-- [x] Music-syncing Gramophone
-- [x] PS2 Controller Interface
-
 Software
 - [ ] dont give up game
 - [ ] Battlecode
 - [ ] grade 11 libgdx game protoype
 - [ ] twitter Bot
 - [ ] reshape reality window frame game
+- [ ] MachineLearningProjects
 
 
 ## Sources
