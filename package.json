@@ -3,6 +3,9 @@
     "name": "startbootstrap-agency",
     "version": "4.1.1",
     "description": "Agency is a one page HTML theme for Bootstrap.",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
     "keywords": [
         "css",
         "sass",
