@@ -5,7 +5,7 @@ $(document).ready(function () {
     // ========================================================================= //
 
     //typed library is only needed on main page
-    if (window.location.href.includes("index.html") || window.location.pathname.equals("/")) {
+    if (window.location.href.endsWith("index.html") || window.location.pathname.endsWith("/")) {//if index.html or root site
         var typed = new Typed('#typed', {
             stringsElement: '#typed-strings',
             typeSpeed: 75, //type speed in milliseconds
