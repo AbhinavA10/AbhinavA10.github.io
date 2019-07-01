@@ -14,12 +14,22 @@ I chose to use Bootstrap 4.1 as it helps implement most of the css required to s
 - [ ] update media CSS tags
 - [x] add google analytics
 - [ ] add poster for all videos
+- [ ] movie video source to youtube and iframe. Github Repo too large
 - [x] rename PNG, github seems to mix and match
 - [ ] To make a button filterable portfolio, use [this](https://www.w3schools.com/howto/howto_js_filter_elements.asp)
 - [ ] For a text-searchable portfolio, use [this](https://www.w3schools.com/bootstrap/bootstrap_filters.asp)
 - [ ] use JUSTDOIT as thumbnail for messagewand portfolio instead
-- [ ] incorporate suggestions from google analytics insights
 - [ ] see if including html files is possible --ex. navbar or footer html
+- [ ] update gulp file
+- [ ] use JSON insertion to handle past employment?
+- [ ] use JSON or html insertion to handle past projects?
+- [ ] combine all projects into 1 category -- and can then sort with filterable portfolio for software or hardware.
+
+Notes regarding the above: including html files 
+- ssi include directive
+- use gulp to create a source and deplor kind directory. we can include files this way
+    - build before every commit.
+- or use Jquery $().load('header.html') etc. to load html --> cross origin request problem. Look at the reddit link concerning creating local http server
 
 ### Planned Sitemap
 
@@ -64,3 +74,6 @@ How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 ## Copyright and License
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/LICENSE)
+
+
+https://github.com/BlackrockDigital/startbootstrap-agency 
