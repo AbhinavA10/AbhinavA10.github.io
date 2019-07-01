@@ -31,6 +31,12 @@ Notes regarding the above: including html files
     - build before every commit.
 - or use Jquery $().load('header.html') etc. to load html --> cross origin request problem. Look at the reddit link concerning creating local http server
 
+SCSS is an easier to write css that works with includes.
+Gulp can then compile this to css for the browser
+prefixed underscore means scss file is partial, and should not be compiled into css yet
+
+- need to move all custom css to the scss files
+
 ### Planned Sitemap
 
 The following are still left to do:
@@ -64,16 +70,8 @@ How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 
 # [Start Bootstrap - Agency](https://startbootstrap.com/template-overviews/agency/)
 
-[Agency](https://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections and a responsive portfolio grid with hover effects
-
-## Status
-
-[![npm version](https://img.shields.io/npm/v/startbootstrap-agency.svg)](https://www.npmjs.com/package/startbootstrap-agency)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-agency.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-agency)
+[Agency](https://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
 ## Copyright and License
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/LICENSE)
-
-
-https://github.com/BlackrockDigital/startbootstrap-agency 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/AbhinavA10/AbhinavA10.github.io/master/LICENSE)
