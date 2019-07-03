@@ -10,17 +10,17 @@
 }
 
 .btn-primary {
-  background-color: $primary;
-  border-color: $primary;
+  background-color: #f45f28;
+  border-color: #f45f28;
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($primary, 7.5%) !important;
-    border-color: darken($primary, 7.5%) !important;
+    background-color: #f24d11 !important;
+    border-color: #f24d11  !important;
     color: white;
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
   }
 }

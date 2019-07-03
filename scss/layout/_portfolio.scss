@@ -17,7 +17,7 @@
         -moz-transition: all ease 0.5s;
         transition: all ease 0.5s;
         opacity: 0;
-        background: fade-out($primary, .1);
+        background: rgba(244, 95,40,0.8); /*colour when hovering on portfolio modals*/;
         &:hover {
           opacity: 1;
         }
@@ -71,6 +71,7 @@
 }
 
 .portfolio-modal {
+  padding-right: 0px !important;
   .modal-dialog {
     margin: 1rem;
     max-width: 100vw;
@@ -78,6 +79,7 @@
   .modal-content {
     padding: 100px 0;
     text-align: center;
+    /*background: #fffcf7;  a creamish colour*/
     h2 {
       font-size: 3em;
       margin-bottom: 15px;
@@ -138,3 +140,33 @@
     }
   }
 }
+
+/*Overriding bootstraps' chevron for carousels*/
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F45F28' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F45F28' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.vidPortfolio {
+  overflow: hidden;
+  padding-bottom: 30px; /*this matches the image padding in a carousel*/
+  width: 16vw; /*doesn't show up properly on a phone*/
+}
+.portfolio-description {
+  text-align: left;
+  text-indent: 50px;
+}
+
+img.portfolioImgWide {
+  /* height:9vw;*/
+  width: 16vw;
+}
+
+/*
+The @media tags allow to target specific devices based on size etc.
+https://www.htmlgoodies.com/beyond/css/targeting-specific-devices-in-your-style-sheets.html
+
+*/

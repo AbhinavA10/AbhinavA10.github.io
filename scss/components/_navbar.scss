@@ -8,17 +8,17 @@
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: $primary;
+    background-color: #ff5c33;
     @include heading-font;
   }
   .navbar-brand {
-    color: $primary;
+    color: #4d94ff;
     @include script-font;
     &.active,
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: #005ce6;
     }
   }
   .navbar-nav {
@@ -32,7 +32,7 @@
         @include heading-font;
         &.active,
         &:hover {
-          color: $primary;
+          color: #ff5c33;
         }
       }
     }
@@ -40,17 +40,17 @@
 }
 @media(min-width:992px) {
   #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent;
+    background-color:  hsl(220, 12%, 18%);
     .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
+      -moz-transition: all 0.3s; //TODO: remove non transition words
       transition: all 0.3s;
     }
     .navbar-nav {

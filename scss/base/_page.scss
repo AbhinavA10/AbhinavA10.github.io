@@ -9,14 +9,14 @@ p {
 }
 
 a {
-  color: $primary;
+  color: #f45f28;
   &:hover {
-    color: darken($primary, 10%);
+    color: #f24d11;
   }
 }
 
 .text-primary {
-  color: $primary !important;
+  color: #f45f28 !important;
 }
 
 h1,
@@ -29,7 +29,7 @@ h6 {
   @include heading-font;
 }
 
-.page-section {
+section { // was .page-section
   padding: 100px 0;
   h2.section-heading {
     font-size: 40px;
@@ -44,21 +44,29 @@ h6 {
     text-transform: none;
     @include serif-font;
   }
+  h3.section-subheading-normal {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 }
 @media(min-width:768px) {
   section {
-    padding: 150px 0;
+    padding: 50px 0;
   }
 }
 
 // Highlight color customization
 ::-moz-selection {
-  background: $primary;
+  background: rgb(244, 95, 40);
   text-shadow: none;
 }
 
 ::selection {
-  background: $primary;
+  background: rgb(244, 95, 40);
   text-shadow: none;
 }
 

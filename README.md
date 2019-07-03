@@ -4,6 +4,8 @@ My Personal Website, and some documentation for future use.
 
 I chose to use Bootstrap 4.1 as it helps implement most of the css required to scale my site to mobile. Using the column and grid style formatting makes the website quite reactive.
 
+During the creation of this website, I also learnt about tools like webpack and gulp.
+
 ## Todo and Issues
 
 - [ ] make better favicon.ico/logo
@@ -13,29 +15,31 @@ I chose to use Bootstrap 4.1 as it helps implement most of the css required to s
 - [ ] carousel indicators --> change colours
 - [ ] update media CSS tags
 - [x] add google analytics
-- [ ] add poster for all videos
 - [ ] movie video source to youtube and iframe. Github Repo too large
 - [x] rename PNG, github seems to mix and match
 - [ ] To make a button filterable portfolio, use [this](https://www.w3schools.com/howto/howto_js_filter_elements.asp)
-- [ ] For a text-searchable portfolio, use [this](https://www.w3schools.com/bootstrap/bootstrap_filters.asp)
+    - [ ] combine all projects into 1 category -- and can then sort with filterable portfolio for software or hardware.
 - [ ] use JUSTDOIT as thumbnail for messagewand portfolio instead
-- [ ] see if including html files is possible --ex. navbar or footer html
+- [ ] include html files --ex. navbar or footer html
 - [ ] update gulp file
 - [ ] use JSON insertion to handle past employment?
 - [ ] use JSON or html insertion to handle past projects?
-- [ ] combine all projects into 1 category -- and can then sort with filterable portfolio for software or hardware.
+- [ ] create sitemape for better indexing (can test SEO score with Lighthouse chrome extension)
+- need to move all custom css to the scss files-- TODO's in css file
+- need to look at js after that
 
-Notes regarding the above: including html files 
+Notes regarding including html files and methods to do so:
 - ssi include directive
 - use gulp to create a source and deplor kind directory. we can include files this way
-    - build before every commit.
+    - build before every commit, or create something on github to autobuild before deploy
+    - https://css-tricks.com/the-simplest-ways-to-handle-html-includes/#article-header-id-1
+        - https://stackoverflow.com/questions/21995500/compile-html-partials-with-gulp-js
+    - html partial gulp
 - or use Jquery $().load('header.html') etc. to load html --> cross origin request problem. Look at the reddit link concerning creating local http server
 
 SCSS is an easier to write css that works with includes.
 Gulp can then compile this to css for the browser
 prefixed underscore means scss file is partial, and should not be compiled into css yet
-
-- need to move all custom css to the scss files
 
 ### Planned Sitemap
 
