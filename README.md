@@ -25,21 +25,23 @@ During the creation of this website, I also learnt about tools like webpack and 
 - [ ] use JSON insertion to handle past employment?
 - [ ] use JSON or html insertion to handle past projects?
 - [ ] create sitemape for better indexing (can test SEO score with Lighthouse chrome extension)
-- need to move all custom css to the scss files-- TODO's in css file
-- need to look at js after that
+- need to look at js for gulpfile after that
 
 Notes regarding including html files and methods to do so:
 - ssi include directive
 - use gulp to create a source and deplor kind directory. we can include files this way
     - build before every commit, or create something on github to autobuild before deploy
-    - https://css-tricks.com/the-simplest-ways-to-handle-html-includes/#article-header-id-1
+    - "html partial gulp"
+        - https://css-tricks.com/the-simplest-ways-to-handle-html-includes/#article-header-id-1
         - https://stackoverflow.com/questions/21995500/compile-html-partials-with-gulp-js
-    - html partial gulp
+    - html templating engine
+        - Nunjucks: https://zellwk.com/blog/nunjucks-with-gulp/
+            - https://github.com/ericmotil/gulp-nunjucks-sass
+            - https://www.smashingmagazine.com/2018/03/static-site-with-nunjucks/
+        - Handlebars
+        
+    
 - or use Jquery $().load('header.html') etc. to load html --> cross origin request problem. Look at the reddit link concerning creating local http server
-
-SCSS is an easier to write css that works with includes.
-Gulp can then compile this to css for the browser
-prefixed underscore means scss file is partial, and should not be compiled into css yet
 
 ### Planned Sitemap
 
