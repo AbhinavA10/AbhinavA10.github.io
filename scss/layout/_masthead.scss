@@ -1,21 +1,30 @@
 // Styling for the masthead
 header.masthead {
+  /*duplicate this class to add other bg images on other landings*/
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg.jpg');
+  background: linear-gradient(
+    to bottom right,
+    #ff6600 3%,
+    #3399ff 79%
+  ); /*url("../img/header-bg.jpg");*/
+  /*Other good one: linear-gradient(to bottom right, #ff6600 10%, #3399ff 101%);*/
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed; /*parallax effect on desktop*/
   background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
     .intro-lead-in {
       font-size: 22px;
-      font-style: italic;
       line-height: 22px;
+      font-style: bold;
       margin-bottom: 25px;
-      @include serif-font;
+      @include old-font;
     }
     .intro-heading {
       font-size: 50px;
@@ -26,6 +35,22 @@ header.masthead {
     }
   }
 }
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-width: 1366px) {
+  header.masthead {
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom right, #ff6600 3%, #3399ff 79%);
+    background-repeat: no-repeat;
+    background-attachment: scroll; /*switch off on mobile */
+    background-position: center center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
 @media(min-width:768px) {
   header.masthead {
     .intro-text {
@@ -33,10 +58,9 @@ header.masthead {
       padding-bottom: 200px;
       .intro-lead-in {
         font-size: 40px;
-        font-style: italic;
         line-height: 40px;
         margin-bottom: 25px;
-        @include serif-font;
+        @include old-font;
       }
       .intro-heading {
         font-size: 75px;
@@ -45,6 +69,10 @@ header.masthead {
         margin-bottom: 50px;
         @include heading-font;
       }
+    }
+    .landing-smaller {
+      padding-top: 150px;
+      padding-bottom: 100px; /*these change the big landing portion on a page*/
     }
   }
 }
