@@ -12,9 +12,7 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
-
-// Load package.json for banner
-const pkg = require('./package.json');
+var nunjucksRender = require('gulp-nunjucks-render');
 
 // Set the banner content - the comment at the top of built files
 const banner = ['/*!\n',
@@ -57,10 +55,20 @@ function modules() {
   // Font Awesome Webfonts -- version 5 not used right now 
   var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
     .pipe(gulp.dest('./vendor/fontawesome-free/webfonts'));
+  // Font Awesome Files, Version 4.
+  var fontAwesomeVer4 = gulp.src([
+    './node_modules/font-awesome/**/*',
+    '!./node_modules/font-awesome/{less,less/*}',
+    '!./node_modules/font-awesome/{scss,scss/*}',
+    '!./node_modules/font-awesome/.*',
+    '!./node_modules/font-awesome/*.{txt,json,md}'
+  ])
+    .pipe(gulp.dest('./vendor/font-awesome'))
+
   // jQuery Easing
   var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
     .pipe(gulp.dest('./vendor/jquery-easing'));
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jqueryEasing);
+  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, fontAwesomeVer4, jqueryEasing);
 }
 
 // CSS task
@@ -77,9 +85,7 @@ function css() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
+    .pipe(header(banner))
     .pipe(gulp.dest("./css"))
     .pipe(rename({
       suffix: ".min"
@@ -87,6 +93,15 @@ function css() {
     .pipe(cleanCSS())
     .pipe(gulp.dest("./css"))
     .pipe(browsersync.stream());
+}
+
+// Convert nunjucks files to full html
+function nunjucks() {
+  return gulp.src('src/pages/*.njk') // the files to 'render'
+    .pipe(nunjucksRender({
+      path: ['src/templates/', 'src/templates/partials'] // String or Array, path to templates. This is where nunjucks searches for includes
+    }))
+    .pipe(gulp.dest('./')); // in a folder for now, but will have to change this
 }
 
 // JS task
@@ -99,9 +114,7 @@ function js() {
       '!./js/jqBootstrapValidation.js'
     ])
     .pipe(uglify())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
+    .pipe(header(banner))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -113,16 +126,18 @@ function js() {
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
   gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
+  gulp.watch("./src/**/*.njk", nunjucks);
   gulp.watch("./**/*.html", browserSyncReload);
 }
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js));
+const build = gulp.series(vendor, gulp.parallel(css, js, nunjucks));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
+exports.nunjucks = nunjucks;
 exports.js = js;
 exports.clean = clean;
 exports.vendor = vendor;

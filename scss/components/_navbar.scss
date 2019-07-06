@@ -1,4 +1,5 @@
 // Styling for the navbar
+// for small screens
 #mainNav {
   background-color: $gray-900;
   .navbar-toggler {
@@ -12,7 +13,7 @@
     @include heading-font;
   }
   .navbar-brand {
-    color: #4d94ff;
+    color: black;
     @include script-font;
     &.active,
     &:active,
@@ -38,6 +39,7 @@
     }
   }
 }
+//large screen
 @media(min-width:992px) {
   #mainNav {
     padding-top: 16px;
@@ -46,7 +48,8 @@
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color:  hsl(220, 12%, 18%);
+    background-color: transparent;// hsl(220, 12%, 18%);
+    transition: 500ms ease; // to smoothly change colour of navbar
     .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
@@ -56,6 +59,8 @@
     .navbar-nav {
       .nav-item {
         .nav-link {
+          font-weight: bold;
+          color: black;
           padding: 1.1em 1em !important;
         }
       }
@@ -63,8 +68,15 @@
     &.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: $gray-900;
+      background-color: #212529;//$gray-900;
+      .nav-item {
+        .nav-link {
+          font-weight: 400;
+          color: white;
+        }
+      }
       .navbar-brand {
+        color: #4d94ff;
         font-size: 1.25em;
         padding: 12px 0;
       }
