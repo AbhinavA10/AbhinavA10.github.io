@@ -14,11 +14,10 @@ During the creation of this website, I also learnt about tools like webpack and 
 - [ ] carousel caption -- appear too high up on picture, and aren't very readable --> mask?
 - [ ] carousel indicators --> change colours
 - [ ] update media CSS tags
-- [x] add google analytics
 - [ ] movie video source to youtube and iframe. Github Repo too large
 - [x] rename PNG, github seems to mix and match
 - [ ] To make a button filterable portfolio, use [this](https://www.w3schools.com/howto/howto_js_filter_elements.asp)
-    - [ ] combine all projects into 1 category -- and can then sort with filterable portfolio for software or hardware.
+    - [ ] can then sort with filterable portfolio for software or hardware.
 - [ ] use JUSTDOIT as thumbnail for messagewand portfolio instead
 - [ ] include html files --ex. navbar or footer html
 - [ ] update gulp file

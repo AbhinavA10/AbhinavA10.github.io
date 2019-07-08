@@ -99,7 +99,7 @@ function css() {
 function nunjucks() {
   return gulp.src('src/pages/*.njk') // the files to 'render'
     .pipe(nunjucksRender({
-      path: ['src/templates/', 'src/templates/partials'] // String or Array, path to templates. This is where nunjucks searches for includes
+      path: ['src/templates/', 'src/templates/partials', 'src/templates/projects'] // String or Array, path to templates. This is where nunjucks searches for includes
     }))
     .pipe(gulp.dest('./')); // in a folder for now, but will have to change this
 }
