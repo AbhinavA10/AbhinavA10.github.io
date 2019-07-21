@@ -24,18 +24,17 @@
             to learn more about it.</h3>
         </div>
       </div>
-      <!-- TODO: IMPLEMENT THIS FILTER LATER
-          <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-            <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-            <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
-          </div>
-          -->
+      <div class="row">
+        <div class="col-lg-12" id="btnPortfolio-container">
+          <button class="btn btn-portfolio-filter btn-portfolio-filter-active" onclick="filterSelection('all')"> All</button>
+          <button class="btn btn-portfolio-filter" onclick="filterSelection('hardware')"> Hardware</button>
+          <button class="btn btn-portfolio-filter" onclick="filterSelection('software')"> Software</button>
+        </div>
+      </div>
+      <!-- https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
 
       {% macro projectCard(title, description, imgSrc, link, filterClasses='') %}
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item filterDiv {{ filterClasses }}">
           <a class="portfolio-link" data-toggle="modal" href="{{ link }}">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -52,12 +51,12 @@
       {% endmacro %}
 
       <div class="row">
-        {{ projectCard("PS2 Controller Interface","Grade 12 Final Project - PCB","img/portfolio/ps2/PS2_thumb.png","#portfolioModalPS2Interface", 'hardware C') }} 
-        {{ projectCard("Music-syncing Light-up Gramophone","Grade 12 project, with Low-pass filter","img/portfolio/gramophone/Gramophone_thumb.png","#portfolioModalGramophone, 'hardware C'") }} 
-        {{ projectCard("Flex-sensing Robotic Hand","Grade 11 3D printed Project","img/portfolio/hand/hand-thumbnail.jpg","#portfolioModalRoboticHand", 'hardware C') }} 
-        {{ projectCard("CHRP3 and UBMP RC Interface","Grade 10 IR Remote Control Final Project","img/portfolio/CHRP3-RC/IMG_20181223_132926_RCThumb.jpg","#portfolioModalUBMPRC", 'hardware C') }} 
-        {{ projectCard("Message Wand","Grade 10 Robotics Club","img/portfolio/wand/WandThumb.jpg","#portfolioModalMessageWand", 'hardware C') }} 
-        {{ projectCard("Sumo Fighting Robot","Grade 9 Robotics Club","img/portfolio/sumobot/sumoThumb.jpg","#portfolioModalSumoFighting", 'hardware C') }} 
+        {{ projectCard("PS2 Controller Interface","Grade 12 Final Project - PCB","img/portfolio/ps2/PS2_thumb.png","#portfolioModalPS2Interface", 'hardware') }} 
+        {{ projectCard("Music-syncing Light-up Gramophone","Grade 12 project, with Low-pass filter","img/portfolio/gramophone/Gramophone_thumb.png","#portfolioModalGramophone, 'hardware'") }} 
+        {{ projectCard("Flex-sensing Robotic Hand","Grade 11 3D printed Project","img/portfolio/hand/hand-thumbnail.jpg","#portfolioModalRoboticHand", 'hardware') }} 
+        {{ projectCard("CHRP3 and UBMP RC Interface","Grade 10 IR Remote Control Final Project","img/portfolio/CHRP3-RC/IMG_20181223_132926_RCThumb.jpg","#portfolioModalUBMPRC", 'hardware') }} 
+        {{ projectCard("Message Wand","Grade 10 Robotics Club","img/portfolio/wand/WandThumb.jpg","#portfolioModalMessageWand", 'hardware') }} 
+        {{ projectCard("Sumo Fighting Robot","Grade 9 Robotics Club","img/portfolio/sumobot/sumoThumb.jpg","#portfolioModalSumoFighting", 'hardware') }} 
       </div>
     </div>
   </section>

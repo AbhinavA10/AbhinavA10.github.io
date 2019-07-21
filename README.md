@@ -19,12 +19,7 @@ During the creation of this website, I also learnt about tools like webpack and 
 - [ ] To make a button filterable portfolio, use [this](https://www.w3schools.com/howto/howto_js_filter_elements.asp)
     - [ ] can then sort with filterable portfolio for software or hardware.
 - [ ] use JUSTDOIT as thumbnail for messagewand portfolio instead
-- [ ] include html files --ex. navbar or footer html
-- [ ] update gulp file
-- [ ] use JSON insertion to handle past employment?
-- [ ] use JSON or html insertion to handle past projects?
-- [ ] create sitemape for better indexing (can test SEO score with Lighthouse chrome extension)
-- need to look at js for gulpfile after that
+- [ ] create sitemap for better indexing (can test SEO score with Lighthouse chrome extension)
 
 Notes regarding including html files and methods to do so:
 - ssi include directive
@@ -55,6 +50,7 @@ The following are still left to do:
   - [ ] twitter Bot
   - [ ] reshape reality window frame game
   - [ ] MachineLearningProjects
+  - other projects on github
 
 ## Sources
 
