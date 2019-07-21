@@ -170,3 +170,13 @@ The @media tags allow to target specific devices based on size etc.
 https://www.htmlgoodies.com/beyond/css/targeting-specific-devices-in-your-style-sheets.html
 
 */
+
+.filterDiv {
+  display: none;
+}
+.show {
+  display: block;
+}
+#btnPortfolio-container{
+  padding-bottom: 1em;
+}

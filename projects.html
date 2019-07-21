@@ -81,21 +81,20 @@
             to learn more about it.</h3>
         </div>
       </div>
-      <!-- TODO: IMPLEMENT THIS FILTER LATER
-          <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-            <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-            <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
-          </div>
-          -->
+      <div class="row">
+        <div class="col-lg-12" id="btnPortfolio-container">
+          <button class="btn btn-portfolio-filter btn-portfolio-filter-active" onclick="filterSelection('all')"> All</button>
+          <button class="btn btn-portfolio-filter" onclick="filterSelection('hardware')"> Hardware</button>
+          <button class="btn btn-portfolio-filter" onclick="filterSelection('software')"> Software</button>
+        </div>
+      </div>
+      <!-- https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
 
       
 
       <div class="row">
         
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item filterDiv hardware">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModalPS2Interface">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -111,8 +110,8 @@
         </div>
        
         
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModalGramophone, &#39;hardware C&#39;">
+        <div class="col-md-4 col-sm-6 portfolio-item filterDiv ">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModalGramophone, &#39;hardware&#39;">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fa fa-plus fa-3x"></i>
@@ -127,7 +126,7 @@
         </div>
        
         
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item filterDiv hardware">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModalRoboticHand">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -143,7 +142,7 @@
         </div>
        
         
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item filterDiv hardware">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModalUBMPRC">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -159,7 +158,7 @@
         </div>
        
         
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item filterDiv hardware">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModalMessageWand">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -175,7 +174,7 @@
         </div>
        
         
-        <div class="col-md-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-6 portfolio-item filterDiv hardware">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModalSumoFighting">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">

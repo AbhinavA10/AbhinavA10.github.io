@@ -121,6 +121,30 @@ img::-moz-selection {
   box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
 }
 
+.btn-portfolio-filter {
+  background-color: white;
+  border-color: black;
+  padding: 12px 16px;
+}
+
+.btn-portfolio-filter:hover {
+  background-color: #f45f28;
+}
+
+.btn-portfolio-filter:active {
+  background-color: #f24d11;
+  color: white;
+}
+
+.btn-portfolio-filter:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
+}
+
+.btn-portfolio-filter-active {
+  background-color: #f24d11;
+}
+
 #mainNav {
   background-color: #212529;
 }
@@ -467,6 +491,18 @@ The @media tags allow to target specific devices based on size etc.
 https://www.htmlgoodies.com/beyond/css/targeting-specific-devices-in-your-style-sheets.html
 
 */
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#btnPortfolio-container {
+  padding-bottom: 1em;
+}
+
 .timeline {
   position: relative;
   padding: 0;
