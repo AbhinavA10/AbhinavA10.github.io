@@ -26,15 +26,15 @@
       </div>
       <div class="row">
         <div class="col-lg-12" id="btnPortfolio-container">
-          <button class="btn btn-portfolio-filter btn-portfolio-filter-active" onclick="filterSelection('all')"> All</button>
-          <button class="btn btn-portfolio-filter" onclick="filterSelection('hardware')"> Hardware</button>
-          <button class="btn btn-portfolio-filter" onclick="filterSelection('software')"> Software</button>
+          <button class="btn btn-portfolio-filter btn-portfolio-filter-active" data-filter="*"> All</button>
+          <button class="btn btn-portfolio-filter" data-filter=".hardware"> Hardware</button>
+          <button class="btn btn-portfolio-filter" data-filter=".software"> Software</button>
         </div>
       </div>
       <!-- https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
 
       {% macro projectCard(title, description, imgSrc, link, filterClasses='') %}
-        <div class="col-md-4 col-sm-6 portfolio-item filterDiv {{ filterClasses }}">
+        <div class="col-md-4 col-sm-6 portfolio-item {{ filterClasses }}">
           <a class="portfolio-link" data-toggle="modal" href="{{ link }}">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -50,7 +50,7 @@
         </div>
       {% endmacro %}
 
-      <div class="row">
+      <div class="row filterGrid">
         {{ projectCard("PS2 Controller Interface","Grade 12 Final Project - PCB","img/portfolio/ps2/PS2_thumb.png","#portfolioModalPS2Interface", 'hardware') }} 
         {{ projectCard("Music-syncing Light-up Gramophone","Grade 12 project, with Low-pass filter","img/portfolio/gramophone/Gramophone_thumb.png","#portfolioModalGramophone, 'hardware'") }} 
         {{ projectCard("Flex-sensing Robotic Hand","Grade 11 3D printed Project","img/portfolio/hand/hand-thumbnail.jpg","#portfolioModalRoboticHand", 'hardware') }} 
