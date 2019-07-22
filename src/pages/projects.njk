@@ -30,6 +30,7 @@
           <button class="btn btn-portfolio-filter" data-filter=".hardware"> Hardware</button>
           <button class="btn btn-portfolio-filter" data-filter=".software"> Software</button>
           <button class="btn btn-portfolio-filter" data-filter=".pcb"> PCB</button>
+          <button class="btn btn-portfolio-filter" data-filter=".game"> Game </button>
         </div>
       </div>
       
@@ -39,6 +40,7 @@
         {{ projectCard("Music-syncing Light-up Gramophone","Grade 12 project, with Low-pass filter","img/portfolio/gramophone/Gramophone_thumb.png","#portfolioModalGramophone", 'hardware pcb') }} 
         {{ projectCard("Flex-sensing Robotic Hand","Grade 11 3D printed Project","img/portfolio/hand/hand-thumbnail.jpg","#portfolioModalRoboticHand", 'hardware') }} 
         {{ projectCard("CHRP3 and UBMP RC Interface","Grade 10 IR Remote Control Final Project","img/portfolio/CHRP3-RC/IMG_20181223_132926_RCThumb.jpg","#portfolioModalUBMPRC", 'hardware') }} 
+        {{ projectCard("Don't Give Up","Grade 10 Platformer Game","img/portfolio/DontGiveUp/GameThumb.jpg","#portfolioModalDontGiveUp", 'software game') }}
         {{ projectCard("Message Wand","Grade 10 Robotics Club","img/portfolio/wand/WandThumb.jpg","#portfolioModalMessageWand", 'hardware') }} 
         {{ projectCard("Sumo Fighting Robot","Grade 9 Robotics Club","img/portfolio/sumobot/sumoThumb.jpg","#portfolioModalSumoFighting", 'hardware') }}
       </div>
@@ -51,4 +53,5 @@
   {% include "_chrp-ubmp-rc.njk" %}
   {% include "_message-wand.njk" %}
   {% include "_sumo-robot.njk" %}
+  {% include "_dont-give-up-game.njk" %}
 {% endblock %}
