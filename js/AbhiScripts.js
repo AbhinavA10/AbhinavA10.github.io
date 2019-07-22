@@ -16,9 +16,9 @@ $(document).ready(function () {
             loopCount: Infinity,//amount of loops
         });
     }
-    //if there is a hash (modal direct link), then open it
-    directLinkModal(window.location.hash);
     if (window.location.href.includes("projects.html")) {
+        //if there is a hash (modal direct link), then open it
+        directLinkModal(window.location.hash);
         // ========================================================================= //
         //  Portfolio filtering
         // ========================================================================= //
