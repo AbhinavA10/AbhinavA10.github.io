@@ -1,9 +1,0 @@
-
-In a side-scrolling world, you are a crab stuck in a room… with only a butterfly. Do you have what it takes to make it across 20 levels? 
-
-When you start the game off, you will be greeted by a menu. You can press ‘s’ or click on the gear to access the settings of the game. You can press ‘c’ to access the credits of Don’t Give Up. 
-
-
-This is a game like “Give Up”. Don’t Give Up is a side-scrolling platformer in which you are a crab that is trying to make it across to the right side of the room. There are 19 levels, and each level gets progressively harder.
-You are allowed to give up a maximum of ten times before the program stops.
-You will be bombarded by obstacles such as LaserGuns, spikes, saws, falling platforms, earthquakes, and altered gravity.
