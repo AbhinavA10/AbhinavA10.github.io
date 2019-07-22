@@ -65,7 +65,7 @@
         <!-- reduced size of this landing portion -->
         <div class="intro-lead-in"></div>
         <div class="intro-heading text-uppercase">
-          <p>Hardware</p>
+          <p>Projects</p>
         </div>
       </div>
   </header>
@@ -76,9 +76,9 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Projects</h2>
-          <h3 class="section-subheading-normal text-muted">Below is a collection of the projects I have
+          <p class=" text-muted">Below is a collection of the projects I have
             created, or co-created over the past years, in reverse-chronological order. Click on the individual project
-            to learn more about it.</h3>
+            to learn more about it.</p>
         </div>
       </div>
       <div class="row">
@@ -86,15 +86,14 @@
           <button class="btn btn-portfolio-filter btn-portfolio-filter-active" data-filter="*"> All</button>
           <button class="btn btn-portfolio-filter" data-filter=".hardware"> Hardware</button>
           <button class="btn btn-portfolio-filter" data-filter=".software"> Software</button>
+          <button class="btn btn-portfolio-filter" data-filter=".pcb"> PCB</button>
         </div>
       </div>
-      <!-- https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
-
       
-
+      
       <div class="row filterGrid">
         
-        <div class="col-md-4 col-sm-6 portfolio-item hardware">
+        <div class="col-md-4 col-sm-6 portfolio-item hardware pcb">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModalPS2Interface">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -110,8 +109,8 @@
         </div>
        
         
-        <div class="col-md-4 col-sm-6 portfolio-item ">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModalGramophone, &#39;hardware&#39;">
+        <div class="col-md-4 col-sm-6 portfolio-item hardware pcb">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModalGramophone">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fa fa-plus fa-3x"></i>
@@ -188,12 +187,14 @@
             <p class="text-muted">Grade 9 Robotics Club</p>
           </div>
         </div>
-       
+      
       </div>
     </div>
   </section>
   <!-- Portfolio Modals (the popup projects)-->
   
+  
+
   <!-- Modal PS2 Interface -->
   <div class="portfolio-modal modal fade" id="portfolioModalPS2Interface" tabindex="-1" role="dialog"
     aria-hidden="true">
@@ -206,7 +207,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-10 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">PS2 Controller Interface PCB</h2>
@@ -352,25 +353,25 @@
                   <p>
                     The video below shows the first test of my circuit board after etching the PCB.
                   </p>
-                  <video class="d-block w-100 vidPortfolio" poster="img/portfolio/ps2/firstVidPoster.png" preload="none"
-                    controls loop>
-                    <source src="img/portfolio/ps2/Test-First.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/QYHDjI3zjac" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+ 
                   <p>This next video below is the second test of my PCB interface, where I communicate with the PS2
                     controller, and sense whether a button is pressed.</p>
-                  <video class="d-block w-100 vidPortfolio" poster="img/portfolio/ps2/secondVidPoster.png"
-                    preload="none" controls loop>
-                    <source src="img/portfolio/ps2/Test-Second_Wired PS2 Interface.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/8sJkLzBis2g" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+ 
                   <p>The last video shows my PCB interface with the PS2 controller fully working - this includes
                     analogue input from the joystick.</p>
-                  <video class="d-block w-100 vidPortfolio" poster="img/portfolio/ps2/thirdVidPoster.png" preload="none"
-                    controls loop>
-                    <source src="img/portfolio/ps2/Test-Third_Wired PS2 Interface - with analog.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/YFEdJ2FfGd8" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+ 
                 </div>
                 <ul class="list-inline">
                   <li><a href="https://github.com/AbhinavA10/PS2-RC-Car" target="_blank">Github Repo</a></li>
@@ -389,6 +390,7 @@
   </div>
   
   <!-- Modal Light and music syncing gramophone -->
+  
   <div class="portfolio-modal modal fade" id="portfolioModalGramophone" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -399,7 +401,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-10 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Music-syncing Gramophone</h2>
@@ -474,18 +476,18 @@
                     During this project, I also created 3D printable hinges, as we were originally planning on having
                     petals open and close at the top of the gramophone.
                   </p>
-                  <video class="d-block w-100 vidPortfolio" poster="img/portfolio/gramophone/darkVidPoster.png"
-                    preload="none" controls loop>
-                    <source src="img/portfolio/gramophone/Gramophone_night.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/IfRoX2KtbN0" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+
                   <p>Above is a demo video of the gramophone display, flashing in sync with the song "Ed Sheeran -
                     Shape of You".</p>
-                  <video class="d-block w-100 vidPortfolio" poster="img/portfolio/gramophone/dayVidPoster.png"
-                    preload="none" controls loop>
-                    <source src="img/portfolio/gramophone/Gramophone_day.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/DEA2j4OvXGA" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+
                   <p>Above is a demo of the same, in the daytime.</p>
                 </div>
                 <ul class="list-inline">
@@ -503,7 +505,8 @@
       </div>
     </div>
   </div>
-  <!-- Modal Flex-sensing 3-D printed Robotic Hand -->
+  
+<!-- Modal Flex-sensing 3-D printed Robotic Hand -->
   <div class="portfolio-modal modal fade" id="portfolioModalRoboticHand" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -514,7 +517,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-10 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">3D Printed Robotic Hand</h2>
@@ -581,16 +584,17 @@
                   </p>
                   <p>The video below shows my robotic hand, mimicking the movements of the user wearing the flex-sensor
                     glove I created.</p>
-                  <video class="d-block w-100 vidPortfolio" poster="img/portfolio/hand/sensingVidPoster.png"
-                    preload="none" controls loop>
-                    <source src="img/portfolio/hand/Flex Sensing.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
-                  <video class="d-block w-100 vidPortfolio" poster="img/portfolio/hand/gestureVidPoster.png"
-                    preload="none" controls loop>
-                    <source src="img/portfolio/hand/Gestures.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/J854ql37A94" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+
+                  <p></p>   
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/w7eW1fjC244" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+ 
                   <p>Above is a demo video of the pre-programmed gestures I have put on the robotic hand.</p>
                 </div>
                 <ul class="list-inline">
@@ -609,6 +613,7 @@
     </div>
   </div>
   <!-- Modal CHRP and UBMP RC  -->
+
   <div class="portfolio-modal modal fade" id="portfolioModalUBMPRC" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -619,7 +624,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-10 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">CHRP and UBMP RC</h2>
@@ -673,11 +678,11 @@
                     receiver. The UBMP sends raw motor commands, implemented in a tank-style control, while the CHRP3
                     board writes the commands directly to the motors using bit manipulation. </p>
                   <p>Below is a demo video.</p>
-                  <video class="d-block w-100 vidPortfolio" poster="img/portfolio/CHRP3-RC/posterRC.png" preload="none"
-                    controls loop>
-                    <source src="img/portfolio/CHRP3-RC/VID_20181230_121210RCBot.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/qE51m4wf0GU" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+
                 </div>
                 <ul class="list-inline">
                   <li>Timeframe: Grade 10</li>
@@ -705,7 +710,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-10 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Message Wand</h2>
@@ -786,7 +791,7 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-10 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Sumo Fighting Robot</h2>
@@ -831,7 +836,7 @@
                 <div class="portfolio-description">
                   <p>Our robotics club teacher, <a href="https://www.siriusmicro.com/index.html">Mr. Rampelt</a>,
                     organized a sumo fight competetion. The aim was to make a robot that pushes your oponents robot off
-                    the platform. I used a Sonar module to detect the other robot, and then push it off the edge by
+                    the platform. I used a Ultrasonic sonar module to detect the other robot, and then push it off the edge by
                     driving forward.
                     This was the project I created in Robotics Club that sparked my interest to create all my other
                     projects. It senses the edge of the table (using IR), and objects in front of it (with sonar).
@@ -840,17 +845,19 @@
                     Below is a demo of the robot sensing objects infront of it, and the edge of a table to avoid
                     falling off.
                   </p>
-                  <video class="d-block w-100 vidPortfolio" preload="none" controls loop>
-                    <source src="img/portfolio/sumobot/VID_20150625_223217_ObjectDemo.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/a8SXxGuowEE" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+
                   <p>
                     The next video is the competition between my robot and my teacher's.
                   </p>
-                  <video class="d-block w-100 vidPortfolio" preload="none" controls loop>
-                    <source src="img/portfolio/sumobot/VID_20150624_125216_sumoFight.mp4" type="video/mp4">
-                    No support for this video type
-                  </video>
+                  
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/H1_DfjgdxdI" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+  </div>
+
                 </div>
                 <ul class="list-inline">
                   <li>Timeframe: Grade 9</li>
