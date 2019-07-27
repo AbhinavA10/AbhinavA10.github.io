@@ -11,7 +11,8 @@
         "gulpBuild": "gulp build",
         "gulpWatch": "gulp watch",
         "gulpDefault": "gulp build",
-        "gulpNunjucks": "gulp nunjucks"
+        "gulpNunjucks": "gulp nunjucks",
+        "gulpNunjucksProjects": "gulp nunjucksProjects"
     },
     "license": "MIT",
     "author": "Abhinav Agrahari",
@@ -24,7 +25,6 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "5.9.0",
         "font-awesome": "4.7.0",
         "bootstrap": "4.3.1",
         "jquery.easing": "1.4.1"

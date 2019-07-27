@@ -49,12 +49,6 @@ function modules() {
   // Bootstrap
   var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
     .pipe(gulp.dest('./vendor/bootstrap'));
-  // Font Awesome CSS -- version 5 not used right now
-  var fontAwesomeCSS = gulp.src('./node_modules/@fortawesome/fontawesome-free/css/**/*')
-    .pipe(gulp.dest('./vendor/fontawesome-free/css'));
-  // Font Awesome Webfonts -- version 5 not used right now 
-  var fontAwesomeWebfonts = gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
-    .pipe(gulp.dest('./vendor/fontawesome-free/webfonts'));
   // Font Awesome Files, Version 4.
   var fontAwesomeVer4 = gulp.src([
     './node_modules/font-awesome/**/*',
@@ -68,7 +62,7 @@ function modules() {
   // jQuery Easing
   var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
     .pipe(gulp.dest('./vendor/jquery-easing'));
-  return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, fontAwesomeVer4, jqueryEasing);
+  return merge(bootstrap, fontAwesomeVer4, jqueryEasing);
 }
 
 // CSS task
@@ -103,6 +97,14 @@ function nunjucks() {
     }))
     .pipe(gulp.dest('./'));
 }
+// Convert nunjucks files to full html
+function nunjucksProjects() {
+  return gulp.src('src/projects/*.njk') // the files to 'render'
+    .pipe(nunjucksRender({
+      path: ['src/components/', 'src/templates/', 'src/templates/partials/', 'src/projects/' ] // String or Array, path to templates. This is where nunjucks searches for includes
+    }))
+    .pipe(gulp.dest('./projects/'));
+}
 
 // JS task
 function js() {
@@ -126,18 +128,19 @@ function js() {
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
   gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
-  gulp.watch("./src/**/*.njk", nunjucks);
+  gulp.watch("./src/**/*.njk", gulp.parallel(nunjucks, nunjucksProjects));
   gulp.watch("./**/*.html", browserSyncReload);
 }
 
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, gulp.parallel(css, js, nunjucks));
+const build = gulp.series(vendor, gulp.parallel(css, js, nunjucks, nunjucksProjects));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
 exports.nunjucks = nunjucks;
+exports.nunjucksProjects = nunjucksProjects;
 exports.js = js;
 exports.clean = clean;
 exports.vendor = vendor;
