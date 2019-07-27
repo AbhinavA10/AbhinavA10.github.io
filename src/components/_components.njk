@@ -1,22 +1,22 @@
 {% macro iframeVideo(videoSource) %}
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="{{ videoSource }}" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/{{videoSource}}" allow="accelerometer; encrypted-media; gyroscope" allowfullscreen></iframe>
   </div>
 {% endmacro %}
 
-{% macro projectCard(title, description, imgSrc, link, filterClasses='') %}
-        <div class="col-md-4 col-sm-6 portfolio-item {{ filterClasses }}">
-          <a class="portfolio-link" data-toggle="modal" href="{{ link }}">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fa fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="{{ imgSrc }}" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>{{ title }}</h4>
-            <p class="text-muted">{{ description }}</p>
-          </div>
+{% macro projectCard(title, description, imgSrc, link, filterClasses = '') %}
+  <div class="col-md-4 col-sm-6 portfolio-item {{ filterClasses }}">
+    <a class="portfolio-link" href="{{ link }}">  
+      <div class="portfolio-hover">
+        <div class="portfolio-hover-content">
+          <i class="fa fa-plus fa-3x"></i>
         </div>
-      {% endmacro %}
+      </div>
+      <img class="img-fluid" src="{{ imgSrc }}" alt="">
+    </a>
+    <div class="portfolio-caption">
+      <h4>{{ title }}</h4>
+      <p class="text-muted">{{ description }}</p>
+    </div>
+  </div>
+{% endmacro %}

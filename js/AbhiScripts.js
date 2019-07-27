@@ -16,12 +16,11 @@ $(document).ready(function () {
             loopCount: Infinity,//amount of loops
         });
     }
+
+    // ========================================================================= //
+    //  Portfolio filtering
+    // ========================================================================= //
     if (window.location.href.includes("projects.html")) {
-        //if there is a hash (modal direct link), then open it
-        directLinkModal(window.location.hash);
-        // ========================================================================= //
-        //  Portfolio filtering
-        // ========================================================================= //
         // -----  init Isotope ---- 
         var $grid = $('.filterGrid').isotope({
             itemSelector: '.portfolio-item',
@@ -45,13 +44,6 @@ $(document).ready(function () {
         }
     }
 });
-
-// ========================================================================= //
-//  Function to open a bootstrap modal based on ID
-// ========================================================================= //
-function directLinkModal(hash) {
-    $(hash).modal('show');
-}
 
 // ========================================================================= //
 //  JSON for Past empolyment , from sumobot1

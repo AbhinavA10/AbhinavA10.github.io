@@ -13,6 +13,8 @@ During the creation of this website, I also learnt about tools like `gulp` and `
 - [ ] spread chevrons out in carousel
 - [ ] carousel caption -- appear too high up on picture, and aren't very readable --> mask?
 - [ ] carousel indicators --> change colours
+- [ ] carousel item transitions are not animated
+- [ ] make carousel indicator circles
 - [ ] update media CSS tags
 - [x] rename PNG, github seems to mix and match
 - [ ] use JUSTDOIT as thumbnail for messagewand portfolio instead
@@ -23,7 +25,6 @@ During the creation of this website, I also learnt about tools like `gulp` and `
 The following are still left to do:
 
 - [ ] Software
-  - [ ] dont give up game
   - [ ] Battlecode
   - [ ] grade 11 libgdx game protoype
   - [ ] Node.js Twitter Bot
@@ -42,7 +43,7 @@ The following are still left to do:
 - [Changing Chevron Colour for Carousel](https://stackoverflow.com/questions/49391266/change-bootstrap-4-carousel-control-colors/49391884)
 - [Filtering projects](https://www.w3schools.com/howto/howto_js_filter_elements.asp)
 - Button filterable portfolio made using `Isotope`
-- html includes and file splitting was done using `Nunjucks`
+- html includes and file splitting was done using `Nunjucks` with a `Gulp` build system
 
 ### Typed.js
 

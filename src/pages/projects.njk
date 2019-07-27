@@ -1,57 +1,52 @@
 <!-- maintenance.njk -->
 {% extends "layout.njk" %}
 {% block content %}
-<!-- Header -->
-  <header class="masthead">
-    <div class="container">
-      <div class="intro-text landing-smaller">
-        <!-- reduced size of this landing portion -->
-        <div class="intro-lead-in"></div>
-        <div class="intro-heading text-uppercase">
-          <p>Projects</p>
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text landing-smaller">
+                <!-- reduced size of this landing portion -->
+                <div class="intro-lead-in"></div>
+                <div class="intro-heading text-uppercase">
+                    <p>Projects</p>
+                </div>
+            </div>
         </div>
-      </div>
-  </header>
-  <!-- Portfolio Grid -->
-  <section class="bg-light" id="portfolio">
+    </header>
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Projects</h2>
-          <p class=" text-muted">Below is a collection of the projects I have
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Projects</h2>
+                    <p class=" text-muted">Below is a collection of the projects I have
             created, or co-created over the past years, in reverse-chronological order. Click on the individual project
             to learn more about it.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" id="btnPortfolio-container">
+                    <button class="btn btn-portfolio-filter btn-portfolio-filter-active" data-filter="*"> All</button>
+                    <button class="btn btn-portfolio-filter" data-filter=".hardware"> Hardware</button>
+                    <button class="btn btn-portfolio-filter" data-filter=".software"> Software</button>
+                    <button class="btn btn-portfolio-filter" data-filter=".pcb"> PCB</button>
+                    <button class="btn btn-portfolio-filter" data-filter=".game"> Game </button>
+                    <button class="btn btn-portfolio-filter" data-filter=".web"> Web </button>
+                </div>
+            </div>
+
+            {% from "_components.njk" import projectCard %}
+            <div class="row filterGrid">
+                {{ projectCard("Wat-Health","Vue.js - Hackathon Web App","img/portfolio/wathealth/wat_thumb.png","./projects/wat-health.html", 'software web') }}
+                {{ projectCard("PS2 Controller Interface","Grade 12 Final Project - PCB","img/portfolio/ps2/PS2_thumb.png","./projects/ps2-interface-pcb.html", 'hardware pcb') }}
+                {{ projectCard("Music-syncing Light-up Gramophone","Grade 12 project, with Low-pass filter","img/portfolio/gramophone/Gramophone_thumb.png","./projects/gramophone.html", 'hardware pcb') }}
+                {{ projectCard("Flex-sensing Robotic Hand","Grade 11 3D printed Project","img/portfolio/hand/hand-thumbnail.jpg","./projects/robotic-hand.html", 'hardware') }}
+                {{ projectCard("CHRP3 and UBMP RC Interface","Grade 10 IR Remote Control Final Project","img/portfolio/CHRP3-RC/IMG_20181223_132926_RCThumb.jpg","./projects/chrp-ubmp-rc.html", 'hardware') }}
+                {{ projectCard("Don't Give Up","Grade 10 Platformer Game","img/portfolio/DontGiveUp/GameThumb.jpg","./projects/dont-give-up-game.html", 'software game') }}
+                {{ projectCard("Message Wand","Grade 10 Robotics Club","img/portfolio/wand/WandThumb.jpg","./projects/message-wand.html", 'hardware') }}
+                {{ projectCard("Sumo Fighting Robot","Grade 9 Robotics Club","img/portfolio/sumobot/sumoThumb.jpg","./projects/sumo-robot.html", 'hardware') }}
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" id="btnPortfolio-container">
-          <button class="btn btn-portfolio-filter btn-portfolio-filter-active" data-filter="*"> All</button>
-          <button class="btn btn-portfolio-filter" data-filter=".hardware"> Hardware</button>
-          <button class="btn btn-portfolio-filter" data-filter=".software"> Software</button>
-          <button class="btn btn-portfolio-filter" data-filter=".pcb"> PCB</button>
-          <button class="btn btn-portfolio-filter" data-filter=".game"> Game </button>
-        </div>
-      </div>
-      
-      {% from "_components.njk" import projectCard %}
-      <div class="row filterGrid">
-        {{ projectCard("PS2 Controller Interface","Grade 12 Final Project - PCB","img/portfolio/ps2/PS2_thumb.png","#portfolioModalPS2Interface", 'hardware pcb') }} 
-        {{ projectCard("Music-syncing Light-up Gramophone","Grade 12 project, with Low-pass filter","img/portfolio/gramophone/Gramophone_thumb.png","#portfolioModalGramophone", 'hardware pcb') }} 
-        {{ projectCard("Flex-sensing Robotic Hand","Grade 11 3D printed Project","img/portfolio/hand/hand-thumbnail.jpg","#portfolioModalRoboticHand", 'hardware') }} 
-        {{ projectCard("CHRP3 and UBMP RC Interface","Grade 10 IR Remote Control Final Project","img/portfolio/CHRP3-RC/IMG_20181223_132926_RCThumb.jpg","#portfolioModalUBMPRC", 'hardware') }} 
-        {{ projectCard("Don't Give Up","Grade 10 Platformer Game","img/portfolio/DontGiveUp/GameThumb.jpg","#portfolioModalDontGiveUp", 'software game') }}
-        {{ projectCard("Message Wand","Grade 10 Robotics Club","img/portfolio/wand/WandThumb.jpg","#portfolioModalMessageWand", 'hardware') }} 
-        {{ projectCard("Sumo Fighting Robot","Grade 9 Robotics Club","img/portfolio/sumobot/sumoThumb.jpg","#portfolioModalSumoFighting", 'hardware') }}
-      </div>
-    </div>
-  </section>
-  <!-- Portfolio Modals (the popup projects)-->
-  {% include "_ps2-interface-pcb.njk" %}
-  {% include "_gramophone.njk" %}
-  {% include "_robotic-hand.njk" %}
-  {% include "_chrp-ubmp-rc.njk" %}
-  {% include "_message-wand.njk" %}
-  {% include "_sumo-robot.njk" %}
-  {% include "_dont-give-up-game.njk" %}
+    </section>
 {% endblock %}
