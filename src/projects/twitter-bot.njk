@@ -2,16 +2,14 @@
 {% block content %}
     {% from "_components.njk" import iframeVideo %}
     <div class = "text-center">
-        <h2 class="section-heading text-uppercase">Sumo Fighting Robot</h2>
-        <p class="item-intro text-muted">Project in grade 9 Robotics Club</p>
+        <h2 class="section-heading text-uppercase">Twitter Bot</h2>
+        <p class="item-intro text-muted">Node.js Heroku App</p>
     </div>
-    <!-- https://www.w3schools.com/bootstrap/bootstrap_carousel.asp
-                    https://getbootstrap.com/docs/4.0/components/carousel/ -->
-    <div id="carouselSumoBot" class="carousel slide" data-ride="carousel">
+    <div id="carouselTwitterBit" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#carouselSumoBot" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselSumoBot" data-slide-to="1"></li>
+            <li data-target="#carouselTwitterBit" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselTwitterBit" data-slide-to="1"></li>
         </ol>
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
@@ -32,41 +30,28 @@
 
         </div>
         <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#carouselSumoBot" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselTwitterBit" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselSumoBot" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselTwitterBit" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>
 
     <div class="portfolio-description">
-        <p>Our robotics club teacher, <a href="https://www.siriusmicro.com/index.html">Mr. Rampelt</a>,
-            organized a sumo fight competetion. The aim was to make a robot that pushes your oponents robot off
-            the platform. I used a Ultrasonic sonar module to detect the other robot, and then push it off the edge by
-            driving forward.
-            This was the project I created in Robotics Club that sparked my interest to create all my other
-            projects. It senses the edge of the table (using IR), and objects in front of it (with sonar).
-        </p>
         <p>
-            Below is a demo of the robot sensing objects infront of it, and the edge of a table to avoid
-            falling off.
+        INSERT CONTENT HERE
         </p>
-        {{ iframeVideo("a8SXxGuowEE") }}
-        <p>
-            The next video is the competition between my robot and my teacher's.
-        </p>
-        {{ iframeVideo("H1_DfjgdxdI") }}
     </div>
     <div class="text-center">
         <ul class="list-inline">
             <li>
                 <a href="https://github.com/AbhinavA10/" target="_blank">Github Repo</a>
             </li>
-            <li>Timeframe: Grade 9</li>
-            <li>Relevant Technologies: C</li>
+            <li>Timeframe: Grade 10</li>
+            <li>Relevant Technologies: Node.js, Twitter API</li>
         </ul>
         <a  href="../projects.html">
             <button class="btn btn-primary" type="button">

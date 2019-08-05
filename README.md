@@ -16,7 +16,7 @@ During the creation of this website, I also learnt about tools like `gulp` and `
 - [ ] carousel item transitions are not animated
 - [ ] make carousel indicator circles
 - [ ] update media CSS tags
-- [x] rename PNG, github seems to mix and match
+- [ ] rename PNG, github seems to mix and match
 - [ ] use JUSTDOIT as thumbnail for messagewand portfolio instead
 - [ ] create sitemap for better indexing (can test SEO score with Lighthouse chrome extension)
 
@@ -32,8 +32,16 @@ The following are still left to do:
   - [ ] MachineLearningProjects
   - [ ] Wat-Health
   - [ ] OpenCV Projects
+    - [ ] Lane Detection
+    - [ ] Kalman Filter
+  - [ ] Driver Drowsiness Detection
   - [ ] Watonomous
   - [ ] Android Apps
+  - [ ] Earthquake App
+  - [ ] Loc8r Angular App
+  - [ ] Vue.js To-do list app
+  - [ ] chat web app - socket.io
+  - [ ] Matrix Solving Robot
   - other projects on github
 
 ## Sources
