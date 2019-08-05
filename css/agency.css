@@ -112,7 +112,7 @@ img::-moz-selection {
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   background-color: #f24d11 !important;
-  border-color: #f24d11  !important;
+  border-color: #f24d11 !important;
   color: white;
 }
 
@@ -146,7 +146,12 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #212529;
+  -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+  border: none;
+  background-color: transparent;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
 }
 
 #mainNav .navbar-toggler {
@@ -154,9 +159,9 @@ img::-moz-selection {
   right: 0;
   padding: 13px;
   text-transform: uppercase;
-  color: white;
+  color: black;
   border: 0;
-  background-color: #ff5c33;
+  background-color: transparent;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -174,24 +179,38 @@ img::-moz-selection {
   font-weight: 400;
   padding: 0.75em 0;
   letter-spacing: 1px;
-  color: white;
+  color: black;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: white;
+}
+
+#mainNav.navbar-shrink {
+  background-color: #212529;
+}
+
+#mainNav.navbar-shrink .nav-item .nav-link {
+  color: white;
+}
+
+#mainNav.navbar-shrink .nav-item .nav-link.active, #mainNav.navbar-shrink .nav-item .nav-link:hover {
   color: #ff5c33;
+}
+
+#mainNav.navbar-shrink .navbar-brand {
+  color: #005ce6;
+}
+
+#mainNav.navbar-shrink .navbar-toggler {
+  color: white;
 }
 
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 16px;
     padding-bottom: 16px;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    border: none;
-    background-color: transparent;
-    -webkit-transition: 500ms ease;
-    transition: 500ms ease;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
@@ -200,7 +219,6 @@ img::-moz-selection {
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     font-weight: bold;
-    color: black;
     padding: 1.1em 1em !important;
   }
   #mainNav.navbar-shrink {

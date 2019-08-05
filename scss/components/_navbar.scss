@@ -1,18 +1,25 @@
 // Styling for the navbar
 // for small screens
 #mainNav {
-  background-color: $gray-900;
+  -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+  -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
+  border: none;
+  background-color: transparent; // hsl(220, 12%, 18%);
+  transition: 500ms ease; // to smoothly change colour of navbar
   .navbar-toggler {
+    // 'MENU' hamburger button, when at the top of the page
     font-size: 12px;
     right: 0;
     padding: 13px;
     text-transform: uppercase;
-    color: white;
+    color: black;
     border: 0;
-    background-color: #ff5c33;
+    background-color: transparent;
     @include heading-font;
   }
   .navbar-brand {
+    // name in top left corner
     color: black;
     @include script-font;
     &.active,
@@ -29,27 +36,41 @@
         font-weight: 400;
         padding: 0.75em 0;
         letter-spacing: 1px;
-        color: white;
+        color: black;
         @include heading-font;
+        &.active,
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+  &.navbar-shrink {
+    // when scrolled down
+    background-color: $gray-900;
+    .nav-item {
+      .nav-link {
+        color: white;
         &.active,
         &:hover {
           color: #ff5c33;
         }
       }
     }
+    .navbar-brand {
+      color: #005ce6;
+    }
+    .navbar-toggler {
+      // Menu hamburger button, when scrolled down
+      color: white;
+    }
   }
 }
 //large screen
-@media(min-width:992px) {
+@media (min-width: 992px) {
   #mainNav {
     padding-top: 16px;
     padding-bottom: 16px;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    border: none;
-    background-color: transparent;// hsl(220, 12%, 18%);
-    transition: 500ms ease; // to smoothly change colour of navbar
     .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
@@ -60,7 +81,6 @@
       .nav-item {
         .nav-link {
           font-weight: bold;
-          color: black;
           padding: 1.1em 1em !important;
         }
       }
@@ -68,7 +88,7 @@
     &.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: #212529;//$gray-900;
+      background-color: $gray-900;
       .nav-item {
         .nav-link {
           font-weight: 400;

@@ -9,14 +9,14 @@ p {
 }
 
 a {
-  color: #f45f28;
+  color: $primary;
   &:hover {
-    color: #f24d11;
+    color: $secondary;
   }
 }
 
 .text-primary {
-  color: #f45f28 !important;
+  color: $primary !important;
 }
 
 h1,
@@ -61,12 +61,12 @@ section { // was .page-section
 
 // Highlight color customization
 ::-moz-selection {
-  background: rgb(244, 95, 40);
+  background: $primary;
   text-shadow: none;
 }
 
 ::selection {
-  background: rgb(244, 95, 40);
+  background: $primary;
   text-shadow: none;
 }
 

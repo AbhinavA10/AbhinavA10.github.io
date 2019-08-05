@@ -10,13 +10,13 @@
 }
 
 .btn-primary {
-  background-color: #f45f28;
-  border-color: #f45f28;
+  background-color: $primary;
+  border-color: $primary;
   &:active,
   &:focus,
   &:hover {
-    background-color: #f24d11 !important;
-    border-color: #f24d11  !important;
+    background-color: $secondary !important;
+    border-color: $secondary  !important;
     color: white;
   }
   &:active,
@@ -30,10 +30,10 @@
   border-color: black;
   padding: 12px 16px;
   &:hover { // when you hover over the button
-    background-color: #f45f28;
+    background-color: $primary;
   }
   &:active{ // this is when you click on the button
-    background-color: #f24d11;
+    background-color: $secondary;
     color: white;
   }
   &:focus {
@@ -41,5 +41,5 @@
   }
 }
 .btn-portfolio-filter-active{ // to show which filter is currently being applied
-  background-color: #f24d11;
+  background-color: $secondary;
 }
