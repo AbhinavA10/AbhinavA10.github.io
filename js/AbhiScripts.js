@@ -16,19 +16,37 @@ $(document).ready(function () {
             loopCount: Infinity,//amount of loops
         });
     }
-    //if there is a hash (modal direct link), then open it
-    directLinkModal(window.location.hash);
+
+    // ========================================================================= //
+    //  Portfolio filtering
+    // ========================================================================= //
+    if (window.location.href.includes("projects.html")) {
+        // -----  init Isotope ---- 
+        var $grid = $('.filterGrid').isotope({
+            itemSelector: '.portfolio-item',
+            layoutMode: 'fitRows'
+        });
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("btnPortfolio-container");
+        var btns = btnContainer.getElementsByClassName("btn-portfolio-filter");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                //--- changing css class to update UI ---
+                var current = document.getElementsByClassName("btn-portfolio-filter-active");
+                current[0].className = current[0].className.replace(" btn-portfolio-filter-active", "");
+                this.className += " btn-portfolio-filter-active";
+                //  ----- Isotope filtering -----
+                var filterValue = $(this).attr('data-filter');
+                //console.log('filtering: ' + filterValue);
+                $grid.isotope({ filter: filterValue });
+            });
+        }
+    }
 });
 
 // ========================================================================= //
-//  Function to open a bootstrap modal based on ID
-// ========================================================================= //
-function directLinkModal(hash) {
-    $(hash).modal('show');
-}
-
-// ========================================================================= //
-//  JSON for Past empolyment Typed Js, from sumobot1
+//  JSON for Past empolyment , from sumobot1
 // ========================================================================= //
 /*
 function loadJSON(path, callback) {

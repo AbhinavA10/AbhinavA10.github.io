@@ -1,0 +1,24 @@
+/*
+SCSS is an easier to write css that works with includes.
+Gulp can then compile this to css for the browser
+prefixed underscore means scss file is partial, and should not be compiled into css yet
+*/
+// Core variables and mixins
+@import "base/variables.scss";
+@import "base/mixins.scss";
+
+// Global CSS
+@import "base/page.scss";
+
+// Components
+@import "components/buttons.scss";
+@import "components/navbar.scss";
+
+// Layout
+@import "layout/masthead.scss";
+@import "layout/services.scss";
+@import "layout/portfolio.scss";
+@import "layout/timeline.scss";
+@import "layout/team.scss";
+@import "layout/contact.scss";
+@import "layout/footer.scss";

@@ -1,9 +1,16 @@
 /*!
- * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
+ * Start Bootstrap - Agency 
+ * By BlackRockDigital and Abhinav Agrahari
  */
+
+/*
+SCSS is an easier to write css that works with includes.
+Gulp can then compile this to css for the browser
+prefixed underscore means scss file is partial, and should not be compiled into css yet
+*/
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 p {
@@ -11,11 +18,11 @@ p {
 }
 
 a {
-  color: #f45f28; /*#fed136;*/
+  color: #f45f28;
 }
 
 a:hover {
-  color: #f24d11; /*#fec503;*/
+  color: #f24d11;
 }
 
 .text-primary {
@@ -29,7 +36,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 section {
@@ -48,8 +55,9 @@ section h3.section-subheading {
   font-style: italic;
   margin-bottom: 75px;
   text-transform: none;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
 section h3.section-subheading-normal {
   font-size: 16px;
   font-weight: 400;
@@ -58,14 +66,37 @@ section h3.section-subheading-normal {
   text-transform: none;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 @media (min-width: 768px) {
   section {
-    padding: 50px 0; /*padding between sections*/
+    padding: 50px 0;
   }
 }
 
+::-moz-selection {
+  background: #f45f28;
+  text-shadow: none;
+}
+
+::selection {
+  background: #f45f28;
+  text-shadow: none;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
 .btn {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
 }
 
@@ -79,35 +110,39 @@ section h3.section-subheading-normal {
   border-color: #f45f28;
 }
 
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   background-color: #f24d11 !important;
-  border-color: #f24d11 !important;
+  border-color: #f24d11  !important;
   color: white;
 }
 
-.btn-primary:active,
-.btn-primary:focus {
+.btn-primary:active, .btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
 }
 
-::-moz-selection {
-  background: rgb(244, 95, 40);
-  text-shadow: none;
+.btn-portfolio-filter {
+  background-color: white;
+  border-color: black;
+  padding: 12px 16px;
 }
 
-::selection {
-  background: rgb(244, 95, 40);
-  text-shadow: none;
+.btn-portfolio-filter:hover {
+  background-color: #f45f28;
 }
 
-img::selection {
-  background: transparent;
+.btn-portfolio-filter:active {
+  background-color: #f24d11;
+  color: white;
 }
 
-img::-moz-selection {
-  background: transparent;
+.btn-portfolio-filter:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
+}
+
+.btn-portfolio-filter-active {
+  background-color: #f24d11;
 }
 
 #mainNav {
@@ -122,54 +157,50 @@ img::-moz-selection {
   color: white;
   border: 0;
   background-color: #ff5c33;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #mainNav .navbar-brand {
-  /*"logo" thing on top left corner*/
-  color: #4d94ff;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive; /*! maybe change font here */
+  color: black;
+  font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-#mainNav .navbar-brand.active,
-#mainNav .navbar-brand:active,
-#mainNav .navbar-brand:focus,
-#mainNav .navbar-brand:hover {
+#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
   color: #005ce6;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  /* rest of the nav bar*/
   font-size: 90%;
   font-weight: 400;
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active,
-#mainNav .navbar-nav .nav-item .nav-link:hover {
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #ff5c33;
 }
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 16px; /*TODO: change to pixel*/
+    padding-top: 16px;
     padding-bottom: 16px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: hsl(220, 12%, 18%);
+    background-color: transparent;
+    -webkit-transition: 500ms ease;
+    transition: 500ms ease;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
+    font-weight: bold;
+    color: black;
     padding: 1.1em 1em !important;
   }
   #mainNav.navbar-shrink {
@@ -177,50 +208,34 @@ img::-moz-selection {
     padding-bottom: 0;
     background-color: #212529;
   }
+  #mainNav.navbar-shrink .nav-item .nav-link {
+    font-weight: 400;
+    color: white;
+  }
   #mainNav.navbar-shrink .navbar-brand {
+    color: #4d94ff;
     font-size: 1.25em;
     padding: 12px 0;
   }
 }
-/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-@media only screen and (max-width: 1366px) {
-  header.masthead {
-    /*duplicate this class to add other bg images on other landings*/
-    text-align: center;
-    color: white;
-    background: linear-gradient(to bottom right, #ff6600 3%, #3399ff 79%);
-    background-repeat: no-repeat;
-    background-attachment: scroll; /*switch off on mobile */
-    background-position: center center;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
 header.masthead {
   /*duplicate this class to add other bg images on other landings*/
   text-align: center;
   color: white;
-  background: linear-gradient(
-    to bottom right,
-    #ff6600 3%,
-    #3399ff 79%
-  ); /*url("../img/header-bg.jpg");*/
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(3%, #ff6600), color-stop(79%, #3399ff));
+  background: linear-gradient(to bottom right, #ff6600 3%, #3399ff 79%);
+  /*url("../img/header-bg.jpg");*/
   /*Other good one: linear-gradient(to bottom right, #ff6600 10%, #3399ff 101%);*/
   background-repeat: no-repeat;
-  background-attachment: fixed; /*parallax effect on desktop*/
+  background-attachment: fixed;
+  /*parallax effect on desktop*/
   background-position: center center;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
 header.masthead .intro-text {
-  padding-top: 150px; /*not sure*/
+  padding-top: 150px;
   padding-bottom: 100px;
 }
 
@@ -237,17 +252,28 @@ header.masthead .intro-text .intro-heading {
   font-weight: 700;
   line-height: 50px;
   margin-bottom: 25px;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-width: 1366px) {
+  header.masthead {
+    text-align: center;
+    color: white;
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(3%, #ff6600), color-stop(79%, #3399ff));
+    background: linear-gradient(to bottom right, #ff6600 3%, #3399ff 79%);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    /*switch off on mobile */
+    background-position: center center;
+    background-size: cover;
+  }
 }
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
-  }
-  header.masthead .landing-smaller {
-    padding-top: 150px;
-    padding-bottom: 100px; /*these change the big landing portion on a page*/
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
@@ -260,7 +286,12 @@ header.masthead .intro-text .intro-heading {
     font-weight: 700;
     line-height: 75px;
     margin-bottom: 50px;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  }
+  header.masthead .landing-smaller {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    /*these change the big landing portion on a page*/
   }
 }
 
@@ -287,26 +318,17 @@ header.masthead .intro-text .intro-heading {
   width: 100%;
   height: 100%;
   -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(
-    244,
-    95,
-    40,
-    0.8
-  ); /*colour when hovering on portfolio modals*/
+  background: rgba(244, 95, 40, 0.8);
+  /*colour when hovering on portfolio modals*/
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
   opacity: 1;
 }
 
-#portfolio
-  .portfolio-item
-  .portfolio-link
-  .portfolio-hover
-  .portfolio-hover-content {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -317,27 +339,12 @@ header.masthead .intro-text .intro-heading {
   color: white;
 }
 
-#portfolio
-  .portfolio-item
-  .portfolio-link
-  .portfolio-hover
-  .portfolio-hover-content
-  i {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
   margin-top: -12px;
 }
 
-#portfolio
-  .portfolio-item
-  .portfolio-link
-  .portfolio-hover
-  .portfolio-hover-content
-  h3,
-#portfolio
-  .portfolio-item
-  .portfolio-link
-  .portfolio-hover
-  .portfolio-hover-content
-  h4 {
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
   margin: 0;
 }
 
@@ -358,7 +365,7 @@ header.masthead .intro-text .intro-heading {
   font-size: 16px;
   font-style: italic;
   margin: 0;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #portfolio * {
@@ -381,7 +388,6 @@ header.masthead .intro-text .intro-heading {
 }
 
 .portfolio-modal .modal-content {
-  /* the 'visible' portion of my modal*/
   padding: 100px 0;
   text-align: center;
   /*background: #fffcf7;  a creamish colour*/
@@ -400,7 +406,7 @@ header.masthead .intro-text .intro-heading {
   font-size: 16px;
   font-style: italic;
   margin: 20px 0 30px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .portfolio-modal .modal-content ul.list-inline {
@@ -438,7 +444,6 @@ header.masthead .intro-text .intro-heading {
   margin-left: 35px;
   /* IE 9 */
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: #212529;
 }
@@ -450,9 +455,52 @@ header.masthead .intro-text .intro-heading {
   height: 75px;
   /* IE 9 */
   -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   background-color: #212529;
+}
+
+/*Overriding bootstraps' chevron for carousels*/
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F45F28' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F45F28' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.vidPortfolio {
+  overflow: hidden;
+  padding-bottom: 30px;
+  /*this matches the image padding in a carousel*/
+  width: 16vw;
+  /*doesn't show up properly on a phone*/
+}
+
+.portfolio-description {
+  text-align: left;
+  text-indent: 50px;
+}
+
+img.portfolioImgWide {
+  /* height:9vw;*/
+  width: 16vw;
+}
+
+/*
+The @media tags allow to target specific devices based on size etc.
+https://www.htmlgoodies.com/beyond/css/targeting-specific-devices-in-your-style-sheets.html
+
+*/
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#btnPortfolio-container {
+  padding-bottom: 1em;
 }
 
 .timeline {
@@ -468,7 +516,7 @@ header.masthead .intro-text .intro-heading {
   left: 40px;
   width: 2px;
   margin-left: -1.5px;
-  content: "";
+  content: '';
   background-color: #e9ecef;
 }
 
@@ -478,10 +526,9 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 50px;
 }
 
-.timeline > li:after,
-.timeline > li:before {
+.timeline > li:after, .timeline > li:before {
   display: table;
-  content: " ";
+  content: ' ';
 }
 
 .timeline > li:after {
@@ -693,33 +740,32 @@ section#contact .form-group textarea.form-control {
 
 section#contact .form-control:focus {
   border-color: #f45f28;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 section#contact :-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
-  /* Firefox 18- */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 section#contact ::-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
-  /* Firefox 19+ */
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 footer {
@@ -731,7 +777,7 @@ footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 footer ul.quicklinks {
@@ -739,7 +785,7 @@ footer ul.quicklinks {
   line-height: 40px;
   margin-bottom: 0;
   text-transform: none;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 ul.social-buttons {
@@ -753,58 +799,13 @@ ul.social-buttons li a {
   width: 40px;
   height: 40px;
   -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
   transition: all 0.3s;
-  color: white; /*inside icon colour of social media buttons*/
+  color: white;
   border-radius: 100%;
   outline: none;
   background-color: #212529;
 }
 
-ul.social-buttons li a:active,
-ul.social-buttons li a:focus,
-ul.social-buttons li a:hover {
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #f45f28;
 }
-
-/*Overriding bootstraps' chevron for carousels*/
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F45F28' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F45F28' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-}
-
-.vidPortfolio {
-  overflow: hidden;
-  padding-bottom: 30px; /*this matches the image padding in a carousel*/
-  width: 16vw; /*doesn't show up properly on a phone*/
-}
-.portfolio-description {
-  text-align: left;
-  text-indent: 50px;
-}
-
-img.portfolioImgWide {
-  /* height:9vw;*/
-  width: 16vw;
-}
-/*
-The @media tags allow to target specific devices based on size etc.
-https://www.htmlgoodies.com/beyond/css/targeting-specific-devices-in-your-style-sheets.html
-
-*/
-
-/*
-From Folio
-#portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active  {
-  color: #b8a07e;
-  -moz-transition: all 0.5s ease-in-out 0s;
-  -ms-transition: all 0.5s ease-in-out 0s;
-  -o-transition: all 0.5s ease-in-out 0s;
-  -webkit-transition: all 0.5s ease-in-out 0s;
-  transition: all 0.5s ease-in-out 0s;
-}
-
-*/

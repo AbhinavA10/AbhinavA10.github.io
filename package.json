@@ -1,46 +1,46 @@
 {
-    "title": "Agency",
-    "name": "startbootstrap-agency",
-    "version": "4.1.1",
-    "description": "Agency is a one page HTML theme for Bootstrap.",
+    "title": "Website",
+    "name": "portfolio-website",
+    "version": "2.0.0",
     "scripts": {
-        "start": "node_modules/.bin/gulp watch"
-    },
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
-    "homepage": "https://startbootstrap.com/template-overviews/agency",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-agency/issues",
-        "email": "feedback@startbootstrap.com"
+        "start": "gulp watch",
+        "gulpModules": "gulp modules",
+        "gulpCss": "gulp css",
+        "gulpJS": "gulp js",
+        "gulpVendor": "gulp vendor",
+        "gulpBuild": "gulp build",
+        "gulpWatch": "gulp watch",
+        "gulpDefault": "gulp build",
+        "gulpNunjucks": "gulp nunjucks",
+        "gulpNunjucksProjects": "gulp nunjucksProjects"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Abhinav Agrahari",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "David Miller (http://davidmiller.io/)",
+        "Abhinav Agrahari (AbhinavA10.github.io)"
     ],
     "repository": {
         "type": "git",
         "url": "https://github.com/BlackrockDigital/startbootstrap-agency.git"
     },
     "dependencies": {
-        "bootstrap": "4.1.1",
         "font-awesome": "4.7.0",
-        "jquery": "3.3.1",
-        "jquery.easing": "^1.4.1"
+        "bootstrap": "4.3.1",
+        "jquery.easing": "1.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.24.3",
-        "gulp": "^3.9.1",
-        "gulp-clean-css": "3.9.4",
-        "gulp-header": "2.0.5",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "4.0.1",
-        "gulp-uglify": "3.0.0"
+        "browser-sync": "^2.26.7",
+        "del": "^4.1.1",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-header": "^2.0.7",
+        "gulp-nunjucks-render": "^2.2.3",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-uglify": "^3.0.2",
+        "merge-stream": "^2.0.0"
     }
 }
