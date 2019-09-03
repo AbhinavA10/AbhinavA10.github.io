@@ -32,7 +32,7 @@ The following are still left to do:
   - [ ] MachineLearningProjects
   - [ ] Wat-Health
   - [ ] OpenCV Projects
-    - [ ] Lane Detection
+    - [x] Lane Detection
     - [ ] Kalman Filter
   - [ ] Driver Drowsiness Detection
   - [ ] Watonomous
@@ -86,7 +86,7 @@ Possible methods to include html files in one another:
     - cross origin request problem. Look at the reddit link concerning creating local http server
 
 ## Commit info
-- commit 1ae50006edbce38897b784e4546407058c11f278 is last commit before the new build system
+- commit `1ae50006edbce38897b784e4546407058c11f278` is last commit before the new build system
 
 ## Copyright and License
 

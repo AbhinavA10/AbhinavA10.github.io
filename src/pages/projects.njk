@@ -33,12 +33,14 @@
                     <button class="btn btn-portfolio-filter" data-filter=".pcb"> PCB</button>
                     <button class="btn btn-portfolio-filter" data-filter=".game"> Game </button>
                     <button class="btn btn-portfolio-filter" data-filter=".web"> Web </button>
+                    <button class="btn btn-portfolio-filter" data-filter=".computervision"> Computer Vision </button>
                 </div>
             </div>
 
             {% from "_components.njk" import projectCard %}
             <div class="row filterGrid">
-                {{ projectCard("Wat-Health","Vue.js - Hackathon Web App","img/portfolio/wathealth/wat_thumb.png","./projects/wat-health.html", 'software web') }}
+                {{ projectCard("Lane Detection","OpenCV lane detection pipeline","img/portfolio/lane-detection/05_overlayed.PNG","./projects/lane-detection.html", 'software computervision') }}
+                {{ projectCard("Wat-Health","Vue.js - Hackathon Web App","img/portfolio/wathealth/wat_thumb.PNG","./projects/wat-health.html", 'software web') }}
                 {{ projectCard("PS2 Controller Interface","Grade 12 Final Project - PCB","img/portfolio/ps2/PS2_thumb.png","./projects/ps2-interface-pcb.html", 'hardware pcb') }}
                 {{ projectCard("Music-syncing Light-up Gramophone","Grade 12 project, with Low-pass filter","img/portfolio/gramophone/Gramophone_thumb.png","./projects/gramophone.html", 'hardware pcb') }}
                 {{ projectCard("Flex-sensing Robotic Hand","Grade 11 3D printed Project","img/portfolio/hand/hand-thumbnail.jpg","./projects/robotic-hand.html", 'hardware') }}
