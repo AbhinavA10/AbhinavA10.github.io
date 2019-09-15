@@ -7,6 +7,7 @@
         "gulpModules": "gulp modules",
         "gulpCss": "gulp css",
         "gulpJS": "gulp js",
+        "gulpRenamePNG": "gulp renamePNG",
         "gulpVendor": "gulp vendor",
         "gulpBuild": "gulp build",
         "gulpWatch": "gulp watch",

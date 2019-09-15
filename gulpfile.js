@@ -93,7 +93,7 @@ function css() {
 function nunjucks() {
   return gulp.src('src/pages/*.njk') // the files to 'render'
     .pipe(nunjucksRender({
-      path: ['src/components/', 'src/templates/', 'src/templates/partials/', 'src/projects/' ] // String or Array, path to templates. This is where nunjucks searches for includes
+      path: ['src/components/', 'src/templates/', 'src/templates/partials/', 'src/projects/'] // String or Array, path to templates. This is where nunjucks searches for includes
     }))
     .pipe(gulp.dest('./'));
 }
@@ -101,7 +101,7 @@ function nunjucks() {
 function nunjucksProjects() {
   return gulp.src('src/projects/*.njk') // the files to 'render'
     .pipe(nunjucksRender({
-      path: ['src/components/', 'src/templates/', 'src/templates/partials/', 'src/projects/' ] // String or Array, path to templates. This is where nunjucks searches for includes
+      path: ['src/components/', 'src/templates/', 'src/templates/partials/', 'src/projects/'] // String or Array, path to templates. This is where nunjucks searches for includes
     }))
     .pipe(gulp.dest('./projects/'));
 }
@@ -123,7 +123,14 @@ function js() {
     .pipe(gulp.dest('./js'))
     .pipe(browsersync.stream());
 }
-
+function renamePNG() {
+  // rename via function
+  return gulp.src("./img/**/*.png")
+    .pipe(rename(function (path) {
+      path.extname = ".PNG";
+    }))
+    .pipe(gulp.dest("./test"));
+}
 // Watch files
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
@@ -142,6 +149,7 @@ exports.css = css;
 exports.nunjucks = nunjucks;
 exports.nunjucksProjects = nunjucksProjects;
 exports.js = js;
+exports.renamePNG = renamePNG;
 exports.clean = clean;
 exports.vendor = vendor;
 exports.build = build;
