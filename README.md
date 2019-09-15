@@ -31,18 +31,12 @@ The following are still left to do:
   - [ ] reshape reality window frame game
   - [ ] MachineLearningProjects
   - [ ] Wat-Health
-  - [ ] OpenCV Projects
-    - [x] Lane Detection
-    - [ ] Kalman Filter
   - [ ] Driver Drowsiness Detection
-  - [ ] Watonomous
-  - [ ] Android Apps
   - [ ] Earthquake App
   - [ ] Loc8r Angular App
   - [ ] Vue.js To-do list app
   - [ ] chat web app - socket.io
   - [ ] Matrix Solving Robot
-  - other projects on github
 
 ## Sources
 
