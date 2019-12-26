@@ -38,6 +38,17 @@ The following are still left to do:
   - [ ] chat web app - socket.io
   - [ ] Matrix Solving Robot
 
+## File Structure
+- `~/src/components/` contains 
+- `~/src/pages/` contains
+- `~/src/projects/` contains 
+
+## Build Instructions
+Do not edit any html files. These are built using Gulp. Only edit `.njk` files
+
+After updating njk file, to build website:
+- `npm run start`
+
 ## Sources
 
 - [Carousel](https://www.w3schools.com/bootstrap/bootstrap_carousel.asp)
