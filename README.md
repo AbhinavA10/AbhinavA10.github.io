@@ -2,9 +2,9 @@
 
 My Personal Website, and some documentation for future use.
 
-I chose to use `Bootstrap 4.3.1` as it helps implement most of the css required to scale my site to mobile. Using the column and grid style formatting makes the website quite reactive.
+I chose to use `Bootstrap 4.3.1` as it helps implement most of the css required to scale my site to mobile. Using the column and grid style formatting makes the website reactive to different browser widths
 
-During the creation of this website, I also learnt about tools like `gulp` and `Nunjucks`.
+During the creation of this website, I also learnt about tools like `gulp` `browsersync`, and `Nunjucks`.
 
 ## Todo and Issues
 
@@ -17,36 +17,31 @@ During the creation of this website, I also learnt about tools like `gulp` and `
 - [ ] make carousel indicator circles
 - [ ] update media CSS tags
 - [ ] rename PNG, github seems to mix and match
-- [ ] use JUSTDOIT as thumbnail for messagewand portfolio instead
 - [ ] create sitemap for better indexing (can test SEO score with Lighthouse chrome extension)
+- [ ] cycling through carousel images causes text to move up, when images are different heights.
 
 ### Planned Sitemap
 
 The following are still left to do:
 
 - [ ] Software
-  - [ ] Battlecode
-  - [ ] grade 11 libgdx game protoype
   - [ ] Node.js Twitter Bot
   - [ ] reshape reality window frame game
   - [ ] MachineLearningProjects
-  - [ ] Wat-Health
-  - [ ] Driver Drowsiness Detection
-  - [ ] Earthquake App
-  - [ ] Loc8r Angular App
   - [ ] Vue.js To-do list app
-  - [ ] chat web app - socket.io
-  - [ ] Matrix Solving Robot
+  - [ ] RREF Matrix Solving Robot
+  - [ ] NES
+  - [ ] GTFS
 
 ## File Structure
-- `~/src/components/` contains 
-- `~/src/pages/` contains
-- `~/src/projects/` contains 
+- `~/src/components/` contains youtube function, and project card function
+- `~/src/pages/` contains root pages
+- `~/src/projects/` contains all project pages. These will be included into the projects.html page when site is built
 
 ## Build Instructions
 Do not edit any html files. These are built using Gulp. Only edit `.njk` files
 
-After updating njk file, to build website:
+After updating njk file, run the following to build website:
 - `npm run start`
 
 ## Sources
@@ -72,23 +67,12 @@ How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 
 [Agency](https://startbootstrap.com/template-overviews/agency/) is a theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
-## Notes regarding including html files
-Possible methods to include html files in one another:
-- ssi include directive
-- use gulp to create a source and deploy kind-of directory. we can include files this way
-    - build before every commit, or create something on github to autobuild before deploy
-    - "html partial gulp"
-        - https://css-tricks.com/the-simplest-ways-to-handle-html-includes/#article-header-id-1
-        - https://stackoverflow.com/questions/21995500/compile-html-partials-with-gulp-js
-    - html templating engines
-        - Nunjucks: 
-            - Good Tutorial: https://zellwk.com/blog/nunjucks-with-gulp/
-            - Old example of site: https://github.com/ericmotil/gulp-nunjucks-sass
-            - Another example/tutorial https://www.smashingmagazine.com/2018/03/static-site-with-nunjucks/
-        - Handlebars
-        - Gatsby: can get data from *markdown* files from GraphQL?: https://www.gatsbyjs.org/
--  or use Jquery $().load('header.html') etc. to load html
-    - cross origin request problem. Look at the reddit link concerning creating local http server
+### Nunjuck
+- html templating engines
+    - Nunjucks: 
+    - Good Tutorial: https://zellwk.com/blog/nunjucks-with-gulp/
+    - Old example of site: https://github.com/ericmotil/gulp-nunjucks-sass
+    - Another example/tutorial https://www.smashingmagazine.com/2018/03/static-site-with-nunjucks/
 
 ## Commit info
 - commit `1ae50006edbce38897b784e4546407058c11f278` is last commit before the new build system

@@ -1,5 +1,4 @@
 /*!
- * Start Bootstrap - Agency 
  * By BlackRockDigital and Abhinav Agrahari
  */
 

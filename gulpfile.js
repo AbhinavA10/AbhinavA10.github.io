@@ -16,7 +16,6 @@ var nunjucksRender = require('gulp-nunjucks-render');
 
 // Set the banner content - the comment at the top of built files
 const banner = ['/*!\n',
-  ' * Start Bootstrap - Agency \n',
   ' * By BlackRockDigital and Abhinav Agrahari\n',
   ' */\n',
   '\n'
