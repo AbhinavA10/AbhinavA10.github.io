@@ -226,5 +226,21 @@
 		<script src="../lib/typed.min.js" type="text/javascript"></script>
 		<script src="../lib/isotope.pkgd.min.js"></script>
 		<script src="../js/AbhiScripts.min.js" type="text/javascript"></script>
+				<script>
+			if ('loading' in HTMLImageElement.prototype) {
+			// Native lazyloading supported
+				const images = document.querySelectorAll('img[loading="lazy"]');
+				images.forEach(img => {
+					img.src = img.dataset.src;
+				});
+			} else {
+				// Dynamically import the LazySizes library, since native lazyloading was not available
+				const script = document.createElement('script');
+				script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js';
+				document
+					.body
+					.appendChild(script);
+			}
+		</script>
 	</body>
 </html>
