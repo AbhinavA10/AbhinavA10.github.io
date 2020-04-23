@@ -14,6 +14,7 @@ During the creation of this website, I also learnt about tools like `gulp`, `bro
 - [ ] carousel caption -- appear too high up on picture, and aren't very readable --> mask?
 - [ ] carousel indicators --> change colours
 - [ ] carousel item transitions are not animated
+- [ ] [Add Meta description to each page](https://web.dev/meta-description/)
 - [ ] make carousel indicator circles
 - [ ] update media CSS tags
 - [ ] rename PNG, github seems to mix and match
@@ -52,6 +53,7 @@ After updating njk file, run the following to build website:
 - [Filtering projects](https://www.w3schools.com/howto/howto_js_filter_elements.asp)
 - Button filterable portfolio made using `Isotope`
 - html includes and file splitting was done using `Nunjucks` with a `Gulp` build system
+- [Ensure Font remains visible during pageload](https://web.dev/font-display/)
 
 ### Typed.js
 
@@ -78,6 +80,7 @@ How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 ### Lazyloading 
 - [Native lazy-loading for the web](https://web.dev/native-lazy-loading/)
 - [DesignCourse: Native Lazy Loading + A Fallback Solution ..in 60 seconds](https://www.youtube.com/watch?v=6mTKlOGBYfM)
+- [Google Dev's advice](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)
 - https://github.com/aFarkas/lazysizes
 - To setup an image for lazy loading, add:
 ```html
