@@ -15,6 +15,7 @@ During the creation of this website, I also learnt about tools like `gulp`, `bro
 - [ ] carousel indicators --> change colours
 - [ ] carousel item transitions are not animated
 - [ ] [Add Meta description to each page](https://web.dev/meta-description/)
+- [ ] Fix menu button on mobile, when navbar is transparent -- need to animate to black when clicked
 - [ ] make carousel indicator circles
 - [ ] update media CSS tags
 - [ ] rename PNG, github seems to mix and match
@@ -25,14 +26,11 @@ During the creation of this website, I also learnt about tools like `gulp`, `bro
 
 The following are still left to do:
 
-- [ ] Software
-  - [ ] Node.js Twitter Bot
-  - [ ] reshape reality window frame game
-  - [ ] MachineLearningProjects
-  - [ ] Vue.js To-do list app
-  - [ ] RREF Matrix Solving Robot
-  - [ ] NES
-  - [ ] GTFS
+- [ ] Node.js Twitter Bot
+- [ ] reshape reality window frame game
+- [ ] MachineLearningProjects
+- [ ] Vue.js To-do list app
+- [ ] RREF Matrix Solving Robot
 
 ## File Structure
 - `~/src/components/` contains youtube function, and project card function
@@ -54,6 +52,7 @@ After updating njk file, run the following to build website:
 - Button filterable portfolio made using `Isotope`
 - html includes and file splitting was done using `Nunjucks` with a `Gulp` build system
 - [Ensure Font remains visible during pageload](https://web.dev/font-display/)
+- [Font Awesome 4.7 icon list](https://fontawesome.com/v4.7.0/icons/)
 
 ### Typed.js
 
