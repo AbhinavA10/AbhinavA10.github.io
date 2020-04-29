@@ -15,7 +15,9 @@ During the creation of this website, I also learnt about tools like `gulp`, `bro
 - [ ] carousel indicators --> change colours
 - [ ] carousel item transitions are not animated
 - [ ] [Add Meta description to each page](https://web.dev/meta-description/)
+- [ ] Back to projects is a navbar-brand class, so it broke
 - [ ] Fix menu button on mobile, when navbar is transparent -- need to animate to black when clicked
+- [ ] Make index.njk masthead large
 - [ ] make carousel indicator circles
 - [ ] update media CSS tags
 - [ ] rename PNG, github seems to mix and match
@@ -53,6 +55,7 @@ After updating njk file, run the following to build website:
 - html includes and file splitting was done using `Nunjucks` with a `Gulp` build system
 - [Ensure Font remains visible during pageload](https://web.dev/font-display/)
 - [Font Awesome 4.7 icon list](https://fontawesome.com/v4.7.0/icons/)
+- [Creating a 404 page](https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html)
 
 ### Typed.js
 
