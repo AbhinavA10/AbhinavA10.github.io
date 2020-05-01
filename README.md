@@ -6,34 +6,6 @@ I chose to use `Bootstrap 4.3.1` as it helps implement most of the css required 
 
 During the creation of this website, I also learnt about tools like `gulp`, `browsersync`, and `Nunjucks`.
 
-## Todo and Issues
-
-- [ ] make better favicon.ico/logo
-- [ ] folio template can be used for blog and contact structure
-- [ ] spread chevrons out in carousel
-- [ ] carousel caption -- appear too high up on picture, and aren't very readable --> mask?
-- [ ] carousel indicators --> change colours
-- [ ] carousel item transitions are not animated
-- [ ] [Add Meta description to each page](https://web.dev/meta-description/)
-- [ ] Back to projects is a navbar-brand class, so it broke
-- [ ] Fix menu button on mobile, when navbar is transparent -- need to animate to black when clicked
-- [ ] Make index.njk masthead large
-- [ ] make carousel indicator circles
-- [ ] update media CSS tags
-- [ ] rename PNG, github seems to mix and match
-- [ ] create sitemap for better indexing (can test SEO score with Lighthouse chrome extension)
-- [ ] cycling through carousel images causes text to move up, when images are different heights.
-
-### Planned Sitemap
-
-The following are still left to do:
-
-- [ ] Node.js Twitter Bot
-- [ ] reshape reality window frame game
-- [ ] MachineLearningProjects
-- [ ] Vue.js To-do list app
-- [ ] RREF Matrix Solving Robot
-
 ## File Structure
 - `~/src/components/` contains youtube function, and project card function
 - `~/src/pages/` contains root pages
@@ -97,3 +69,23 @@ How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 [Agency](https://startbootstrap.com/template-overviews/agency/) is a theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+
+## Ideas
+
+- [ ] make better favicon.ico/logo
+- [ ] folio template can be used for blog and contact structure
+- [ ] spread chevrons out in carousel
+- [ ] carousel caption -- appear too high up on picture, and aren't very readable --> mask?
+- [ ] carousel indicators --> change colours
+- [ ] update media CSS tags
+- [ ] rename PNG, github seems to mix and match
+
+### Planned Sitemap
+
+The following projects are still left to add:
+
+- [ ] Node.js Twitter Bot
+- [ ] reshape reality window frame game
+- [ ] MachineLearningProjects
+- [ ] Vue.js To-do list app
+- [ ] RREF Matrix Solving Robot
