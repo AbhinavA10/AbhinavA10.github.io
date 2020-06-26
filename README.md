@@ -60,10 +60,6 @@ How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 ```html
 <img class="lazyload" data-src="image.jpg" loading="lazy">
 ```
-
-## Commit info
-- commit `1ae50006edbce38897b784e4546407058c11f278` is last commit before the new build system
-
 ## Copyright and License
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
