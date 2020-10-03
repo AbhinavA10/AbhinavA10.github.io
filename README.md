@@ -14,8 +14,11 @@ During the creation of this website, I also learnt about tools like `gulp`, `bro
 ## Build Instructions
 Do not edit any html files. These are built using Gulp. Only edit `.njk` files
 
-After updating njk file, run the following to build website:
+After updating njk file, run the following to build and serve the website locally:
 - `npm run start`
+
+To build the site, without serving locally, run:
+- `npm run build`
 
 ## Sources
 
@@ -69,7 +72,6 @@ How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 ## Ideas
 
 - [ ] make better favicon.ico/logo
-- [ ] folio template can be used for blog and contact structure
 - [ ] spread chevrons out in carousel
 - [ ] carousel caption -- appear too high up on picture, and aren't very readable --> mask?
 - [ ] carousel indicators --> change colours

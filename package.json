@@ -7,16 +7,8 @@
     ],
     "scripts": {
         "start": "gulp watch",
-        "gulpModules": "gulp modules",
-        "gulpCss": "gulp css",
-        "gulpJS": "gulp js",
-        "gulpRenamePNG": "gulp renamePNG",
-        "gulpVendor": "gulp vendor",
-        "gulpBuild": "gulp build",
-        "gulpWatch": "gulp watch",
-        "gulpDefault": "gulp build",
-        "gulpNunjucks": "gulp nunjucks",
-        "gulpNunjucksProjects": "gulp nunjucksProjects"
+        "build": "gulp build",
+        "rename-png": "gulp renamePNG"
     },
     "license": "MIT",
     "author": "Abhinav Agrahari",

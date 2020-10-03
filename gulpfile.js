@@ -64,7 +64,7 @@ function modules() {
   return merge(bootstrap, fontAwesomeVer4, jqueryEasing);
 }
 
-// CSS task
+// Compile SCSS to CSS
 function css() {
   return gulp
     .src("./scss/**/*.scss")
@@ -87,7 +87,7 @@ function css() {
     .pipe(browsersync.stream());
 }
 
-// Convert nunjucks files to full html
+// Compile nunjucks files to HTML - root pages
 function nunjucks() {
   return gulp.src('src/pages/*.njk') // the files to 'render'
     .pipe(nunjucksRender({
@@ -95,7 +95,8 @@ function nunjucks() {
     }))
     .pipe(gulp.dest('./'));
 }
-// Convert nunjucks files to full html
+
+// Compile nunjucks files to HTML - nested project pages
 function nunjucksProjects() {
   return gulp.src('src/projects/*.njk') // the files to 'render'
     .pipe(nunjucksRender({
@@ -110,8 +111,6 @@ function js() {
     .src([
       './js/*.js',
       '!./js/*.min.js',
-      '!./js/contact_me.js',
-      '!./js/jqBootstrapValidation.js'
     ])
     .pipe(uglify())
     .pipe(header(banner))
@@ -121,6 +120,8 @@ function js() {
     .pipe(gulp.dest('./js'))
     .pipe(browsersync.stream());
 }
+
+// Rename *.png to .*PNG file - for Github Pages hosting
 function renamePNG() {
   // rename via function
   return gulp.src("./img/**/*.png")
@@ -129,6 +130,7 @@ function renamePNG() {
     }))
     .pipe(gulp.dest("./test"));
 }
+
 // Watch files
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
@@ -143,14 +145,7 @@ const build = gulp.series(vendor, gulp.parallel(css, js, nunjucks, nunjucksProje
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
-exports.css = css;
-exports.nunjucks = nunjucks;
-exports.nunjucksProjects = nunjucksProjects;
-exports.js = js;
 exports.renamePNG = renamePNG;
-exports.clean = clean;
-exports.vendor = vendor;
 exports.build = build;
 exports.watch = watch;
-exports.modules = modules;
 exports.default = build;
