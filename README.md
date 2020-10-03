@@ -42,7 +42,7 @@ For the little icon in the tab/bookmarks:
 How to guide is [here](https://tutorialehtml.com/en/what-is-favicon-ico-usage/)
 
 #### Bootstrap
-- Bootstrap requires Javascript, and offeres no graceful fallback if javascript is disabled
+- Bootstrap requires Javascript, and offers no graceful fallback if javascript is disabled
 
 ### Nunjuck
 - html templating engines
