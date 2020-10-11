@@ -5,10 +5,9 @@ header.masthead {
   color: white;
   background: linear-gradient(
     to bottom right,
-    #ff6600 3%,
-    #3399ff 79%
+    $header_bg_left 3%,
+    $header_bg_right 79%
   ); /*url("../img/header-bg.jpg");*/
-  /*Other good one: linear-gradient(to bottom right, #ff6600 10%, #3399ff 101%);*/
   background-repeat: no-repeat;
   background-attachment: fixed; /*parallax effect on desktop*/
   background-position: center center;
@@ -40,7 +39,7 @@ header.masthead {
   header.masthead {
     text-align: center;
     color: white;
-    background: linear-gradient(to bottom right, #ff6600 3%, #3399ff 79%);
+    $background: linear-gradient(to bottom right, header_bg_left 3%, header_bg_right 79%);
     background-repeat: no-repeat;
     background-attachment: scroll; /*switch off on mobile */
     background-position: center center;

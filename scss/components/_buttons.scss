@@ -21,7 +21,7 @@
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
+    box-shadow: 0 0 0 0.2rem $button_shadow !important;
   }
 }
 
@@ -37,7 +37,7 @@
     color: white;
   }
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(244, 95, 40, 0.5) !important;
+    box-shadow: 0 0 0 0.2rem $button_shadow !important;
   }
 }
 .btn-portfolio-filter-active{ // to show which filter is currently being applied

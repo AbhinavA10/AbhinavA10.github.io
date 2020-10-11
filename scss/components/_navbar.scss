@@ -32,6 +32,11 @@
     font-weight: bold;
     color: black;
     opacity: 1;
+    &.active,
+    &:focus,
+    &:hover {
+      color: $navbar_brand_button;
+    }
   }
   .navbar-nav {
     .nav-item {
@@ -57,7 +62,7 @@
         color: white;
         &.active,
         &:hover {
-          color: #ff5c33;
+          color:$primary;
         }
       }
     }
@@ -66,7 +71,7 @@
       &.active,
       &:focus,
       &:hover {
-        color: #3399ff;
+        color: $navbar_brand_button;
       }
     }
     .navbar-toggler {
