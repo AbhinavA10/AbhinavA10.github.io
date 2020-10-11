@@ -20,11 +20,18 @@
   }
   .navbar-brand {
     // name in top left corner
-      @include heading-font;
+    @include heading-font;
     font-size: 90%;
-    color: white;
     font-weight: bold;
+    color: white;
     opacity: 0;
+  }
+  .project-back-bar{
+    @include heading-font;
+    font-size: 120%;
+    font-weight: bold;
+    color: black;
+    opacity: 1;
   }
   .navbar-nav {
     .nav-item {
@@ -73,7 +80,7 @@
   #mainNav {
     padding-top: 16px;
     padding-bottom: 16px;
-    .navbar-brand {
+    .navbar-brand, .project-back-bar {
       font-size: 1.25em;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
