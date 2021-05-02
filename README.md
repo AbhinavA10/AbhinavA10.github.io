@@ -20,6 +20,8 @@ After updating njk file, run the following to build and serve the website locall
 To build the site, without serving locally, run:
 - `npm run build`
 
+Tested with node version `14.7.0 LTS`. Was found not to work with `16.1.0`
+
 ## Sources
 
 - [Carousel](https://www.w3schools.com/bootstrap/bootstrap_carousel.asp)
