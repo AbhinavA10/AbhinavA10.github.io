@@ -39,9 +39,12 @@
 
             {% from "_components.njk" import projectCard %}
             <div class="row filterGrid">
+                {{ projectCard("Rescue Bot","Autonomous Search and Rescue Robot","img/portfolio/rescue-bot/rescue-bot-thumb.PNG","https://github.com/AbhinavA10/Rescue-Heroes", 'hardware') }}
+                {{ projectCard("Covid-19 Tracker","Tracking Covid-19 in Waterloo Reigon","img/portfolio/covid-tracker/app-thumbnail.PNG","./projects/covid-19-tracker.html", 'software web') }}
                 {{ projectCard("F1 Telemetry","Telemetry Dashboard for F1","img/portfolio/f1-telemetry/f1-thumbnail.PNG","./projects/f1-telemetry.html", 'software game web') }}
                 {{ projectCard("Lane Detection","OpenCV lane detection pipeline","img/portfolio/lane-detection/05_overlayed.PNG","./projects/lane-detection.html", 'software computervision ml') }}
                 {{ projectCard("Wat-Health","Vue.js - Hackathon Web App","img/portfolio/wathealth/wat_thumb.PNG","./projects/wat-health.html", 'software web ml') }}
+                {{ projectCard("Matrix Scanner Bot","Linear Algebra Solver Robot","img/portfolio/rref-robot/rref-thumb.jpg","https://github.com/AbhinavA10/RREFBot", 'computervision') }}
                 {{ projectCard("PS2 Controller Interface","Grade 12 Final Project - PCB","img/portfolio/ps2/PS2_thumb.png","./projects/ps2-interface-pcb.html", 'hardware pcb') }}
                 {{ projectCard("Music-syncing Light-up Gramophone","Grade 12 project, with Low-pass filter","img/portfolio/gramophone/Gramophone_thumb.png","./projects/gramophone.html", 'hardware pcb') }}
                 {{ projectCard("Flex-sensing Robotic Hand","Grade 11 3D printed Project","img/portfolio/hand/hand-thumbnail.jpg","./projects/robotic-hand.html", 'hardware') }}

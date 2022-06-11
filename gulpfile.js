@@ -129,6 +129,7 @@ function renamePNG() {
       path.extname = ".PNG";
     }))
     .pipe(gulp.dest("./test"));
+    //TODO consider how to handle the renaming in html pages
 }
 
 // Watch files
