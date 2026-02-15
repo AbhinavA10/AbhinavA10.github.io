@@ -47,7 +47,7 @@ export function HeroSection() {
               className="text-2xl md:text-3xl font-medium mb-6"
               style={{ color: '#ff6b35' }}
             >
-              Robotics Systems & Perception Engineer
+              Robotic Systems & Perception Engineer
             </motion.p>
             
             <motion.p
@@ -56,7 +56,7 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.8 }}
               className="text-lg md:text-xl text-zinc-300 max-w-2xl"
             >
-              Building the future of robotics and intelligent systems.
+              Building the future of intelligent robotic systems.
             </motion.p>
           </motion.div>
         </div>
