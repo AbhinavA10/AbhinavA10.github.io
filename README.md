@@ -2,6 +2,19 @@
 
 My Personal Website, and some documentation for future use.
 
+  This is a code bundle for Second Portfolio Make. The original project is available at https://www.figma.com/design/VLayH4UiXC8LbJXk5qSU34/Second-Portfolio-Make.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  
+  
+
+## Deployment
+- Auto setup through Github Actions https://vite.dev/guide/static-deploy#github-pages
+
 I chose to use `Bootstrap 4.3.1` as it helps implement the css required to scale my site to mobile. Using the column and grid style formatting makes the website reactive to different browser widths
 
 During the creation of this website, besides web technologies and languages, I also learnt about tools like `gulp`, `browsersync`, and `Nunjucks`.
