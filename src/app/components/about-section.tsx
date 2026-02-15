@@ -1,10 +1,25 @@
+import { Code2, Cpu, Cog } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  
+  const skills = [
+    {
+      icon: Cpu,
+      title: 'Software Development',
+      description: 'Expert in C++, Python, and ROS for robotics applications',
+    },
+    {
+      icon: Cog,
+      title: 'Computer Vision',
+      description: 'Advanced perception systems using OpenCV and deep learning, SLAM',
+    },
+  ];
 
   return (
     <section id="about" className="min-h-screen bg-zinc-950 py-24 px-6 md:px-12">
@@ -27,7 +42,7 @@ export function AboutSection() {
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-purple-500/20 rounded-2xl blur-2xl" />
-                <img
+                <ImageWithFallback
                   src="https://avatars.githubusercontent.com/u/23727190?v=4"
                   alt="Abhinav Agrahari"
                   className="relative rounded-2xl w-full object-cover aspect-square"
@@ -42,41 +57,39 @@ export function AboutSection() {
               className="space-y-6"
             >
               <p className="text-lg text-zinc-300 leading-relaxed">
-                With over 8 years of experience in robotics and computer vision, I specialize in 
-                developing cutting-edge solutions that bridge the gap between mechanical systems 
-                and intelligent visual perception.
+              I am a robotics software engineer with a focus on creating intelligent,
+              autonomous systems. I specialize in developing robust software solutions that 
+              enable robots to perceive, reason, and interact with the world.
               </p>
               
               <p className="text-lg text-zinc-300 leading-relaxed">
-                My work spans autonomous navigation systems, advanced camera calibration, 
-                real-time image processing, and robotic manipulation. I'm passionate about 
-                creating technologies that push the boundaries of what machines can see and do.
+                My work spans camera calibration, camera pipelines, and real-time image processing.
+                I'm passionate about creating technologies that push the boundaries of what robots can see and do.
               </p>
 
               <p className="text-lg text-zinc-300 leading-relaxed">
-                When I'm not working on robots, you'll find me experimenting with drone 
-                photography, contributing to open-source computer vision projects, or mentoring 
-                the next generation of engineers.
+                When I'm not working on robots, you'll find me working on DIY projects
+                , or taking photos.
               </p>
 
-              <div className="grid grid-cols-2 gap-6 pt-6">
-                <div className="bg-zinc-900/50 rounded-xl p-4 border border-zinc-800">
-                  <div className="text-3xl font-bold text-orange-500 mb-1">8+</div>
-                  <div className="text-sm text-zinc-400">Years Experience</div>
+              {/* Skills Grid */}
+            <div className="grid gap-6">
+              {skills.map((skill, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-4 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-all duration-500"
+                  style={{ transitionDelay: `${400 + index * 100}ms` }}
+                >
+                  <div className="p-2 bg-gradient-to-br from-orange-500/10 to-orange-500/10 rounded-lg">
+                    <skill.icon className="text-orange-400" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg text-white mb-1">{skill.title}</h3>
+                    <p className="text-gray-400 text-sm">{skill.description}</p>
+                  </div>
                 </div>
-                <div className="bg-zinc-900/50 rounded-xl p-4 border border-zinc-800">
-                  <div className="text-3xl font-bold text-orange-500 mb-1">50+</div>
-                  <div className="text-sm text-zinc-400">Projects Completed</div>
-                </div>
-                <div className="bg-zinc-900/50 rounded-xl p-4 border border-zinc-800">
-                  <div className="text-3xl font-bold text-orange-500 mb-1">15+</div>
-                  <div className="text-sm text-zinc-400">Publications</div>
-                </div>
-                <div className="bg-zinc-900/50 rounded-xl p-4 border border-zinc-800">
-                  <div className="text-3xl font-bold text-orange-500 mb-1">3</div>
-                  <div className="text-sm text-zinc-400">Patents</div>
-                </div>
-              </div>
+              ))}
+            </div>
             </motion.div>
           </div>
         </motion.div>

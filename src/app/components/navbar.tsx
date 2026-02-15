@@ -40,6 +40,12 @@ export function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
             <button
+              onClick={() => scrollToSection('hero')}
+              className="text-sm text-zinc-400 hover:text-white transition-colors"
+            >
+              Home
+            </button>
+            <button
               onClick={() => scrollToSection('about')}
               className="text-sm text-zinc-400 hover:text-white transition-colors"
             >
