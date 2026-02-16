@@ -204,7 +204,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
-                    src={zoomedImage}
+                    src={zoomedImage} 
                     alt="Zoomed"
                     className="max-w-full max-h-full object-contain rounded-lg pointer-events-auto cursor-zoom-out"
                     onClick={() => setZoomedImage(null)}

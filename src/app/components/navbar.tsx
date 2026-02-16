@@ -83,6 +83,12 @@ export function Navbar() {
           >
             <div className="flex flex-col gap-3">
               <button
+                onClick={() => scrollToSection('hero')}
+                className="text-sm text-zinc-400 hover:text-white transition-colors text-left"
+              >
+                Home
+              </button>
+              <button
                 onClick={() => scrollToSection('about')}
                 className="text-sm text-zinc-400 hover:text-white transition-colors text-left"
               >

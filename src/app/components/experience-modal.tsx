@@ -42,7 +42,7 @@ export function ExperienceModal({ experience, isOpen, onClose }: ExperienceModal
                     className="w-12 h-12 rounded-lg object-contain bg-white p-2"
                   />
                   <div>
-                    <h3 className="text-2xl font-bold text-white">{experience.position}</h3>
+                    <h3 className="text-2xl font-bold text-white">{experience.title}</h3>
                     <p className="text-orange-500">{experience.company}</p>
                     <p className="text-sm text-zinc-400">{experience.period}</p>
                   </div>

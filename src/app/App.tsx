@@ -14,7 +14,7 @@ export default function App() {
       <ProjectsSection />
       
       {/* Footer */}
-      <footer className="bg-zinc-900 border-t border-zinc-800 py-12 px-6">
+      <footer className="bg-zinc-950 border-t border-zinc-800 py-12 px-6">
         <div className="container mx-auto max-w-6xl text-center">
           <p className="text-zinc-400 mb-4">
             © 2026 Abhinav Agrahari. All rights reserved.

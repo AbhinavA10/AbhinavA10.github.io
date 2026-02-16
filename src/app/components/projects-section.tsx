@@ -240,7 +240,7 @@ export function ProjectsSection() {
 
   return (
     <>
-      <section id="projects" className="min-h-screen bg-zinc-950 py-24 px-6 md:px-12">
+      <section id="projects" className="min-h-screen bg-zinc-900 py-24 px-6 md:px-12">
         <div className="container mx-auto max-w-7xl">
           <motion.div
             ref={ref}
@@ -287,7 +287,7 @@ export function ProjectsSection() {
                   onClick={() => setSelectedProject(project)}
                   className="group cursor-pointer"
                 >
-                  <div className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
+                  <div className="bg-zinc-950 rounded-2xl overflow-hidden border border-zinc-800 hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
                     {/* Image */}
                     <div className="relative h-48 overflow-hidden">
                       <img

@@ -22,7 +22,7 @@ export function AboutSection() {
   ];
 
   return (
-    <section id="about" className="min-h-screen bg-zinc-950 py-24 px-6 md:px-12">
+    <section id="about" className="min-h-screen bg-zinc-900 py-24 px-6 md:px-12">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           ref={ref}
