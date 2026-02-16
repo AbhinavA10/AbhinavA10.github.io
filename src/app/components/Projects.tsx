@@ -245,7 +245,7 @@ export function ProjectsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent opacity-60"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl text-white font-bold mb-2">{project.title}</h3>
+                <h3 className="text-xl text-white font-bold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, i) => (

@@ -1,39 +1,33 @@
-import { Calendar, MapPin } from 'lucide-react';
-import { useState } from 'react';
-import { useScrollAnimation } from '../../hooks/useScrollAnimation';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { ExperienceModal } from './ExperienceModal';
+import { motion } from 'motion/react';
+import { useInView } from 'motion/react';
+import { useRef, useState } from 'react';
+import { ExperienceModal } from './experience-modal';
 
-interface ExperienceData {
+export interface Experience {
   title: string;
   company: string;
+  // location: string;
   period: string;
+  overview: string;
   logo: string;
   image: string;
-  description: string[];
   details?: {
-    overview?: string;
     responsibilities?: string[];
     achievements?: string[];
     technologies?: string[];
-    media?: string[];
+    images?: string[];
   };
 }
 
-export function ExperienceSection() {
-  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
-  const [selectedExperience, setSelectedExperience] = useState<ExperienceData | null>(null);
-
-const experiences: ExperienceData[] = [
+const experiences: Experience[] = [
   {
     title: 'Robotics Systems & Perception Engineer',
     company: 'Deep Trekker Inc.',
     period: '2023 - Present',
-    description: ['Developed advanced camera systems and gimbal stabilization for commercial drones.'],
+    overview: 'Developed advanced camera systems and gimbal stabilization for commercial drones.',
     logo: './src/media/about/DeepTrekker.jpg',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Developed advanced camera systems and gimbal stabilization for commercial drones.',
       responsibilities: [
         'Design optical systems for aerial photography and videography',
         'Develop embedded software for camera control and image processing',
@@ -46,7 +40,7 @@ const experiences: ExperienceData[] = [
         'Developed auto-exposure algorithm that works in extreme lighting conditions',
       ],
       technologies: ['ROS', 'Python', 'C++', 'Docker', 'TensorFlow', 'OpenCV', 'Git'],
-      media: [
+      images: [
         'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&h=300&fit=crop',
       ],
@@ -56,11 +50,10 @@ const experiences: ExperienceData[] = [
     company: 'Deep Trekker Inc.',
     title: 'Autonomy Software Co-op',
     period: 'Jan. 2022 - Aug. 2022',
-    description: ['Developed advanced camera systems and gimbal stabilization for commercial drones.'],
+    overview: 'Developed advanced camera systems and gimbal stabilization for commercial drones.',
     logo: './src/media/about/DeepTrekkerOld.PNG',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Developed advanced camera systems and gimbal stabilization for commercial drones.',
       responsibilities: [
         'Design optical systems for aerial photography and videography',
         'Develop embedded software for camera control and image processing',
@@ -73,7 +66,7 @@ const experiences: ExperienceData[] = [
         'Developed auto-exposure algorithm that works in extreme lighting conditions',
       ],
       technologies: ['C', 'ARM Cortex', 'IMU Sensors', 'PID Control', 'Image Processing'],
-      media: [
+      images: [
         'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&h=300&fit=crop',
       ],
@@ -83,11 +76,10 @@ const experiences: ExperienceData[] = [
     company: 'Applied Brain Research',
     title: 'Deep Learning Application Developer',
     period: 'May 2021 - Aug. 2021',
-    description: ['Python, Websockets, Benchmarking.'],
+    overview: 'Python, Websockets, Benchmarking.',
     logo: './src/media/about/ABR.PNG',
     image: 'https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29tcGFueSUyMG9mZmljZXxlbnwxfHx8fDE3Njk1MTIzMjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Designed and implemented real-time computer vision algorithms for object detection and tracking, and benchmarked websocket communication for low-latency data transfer.',
       responsibilities: [
         'Design and implement real-time computer vision algorithms for object detection and tracking',
         'Benchmarking websocket communication for low-latency data transfer',
@@ -96,7 +88,7 @@ const experiences: ExperienceData[] = [
         'An achievement',
       ],
       technologies: ['ROS2', 'Python', 'C++', 'OpenCV', 'PyTorch', 'CUDA', 'PCL'],
-      media: [
+      images: [
         'https://images.unsplash.com/photo-1593568305252-1b8a33ac4f22?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1554941426-47d681795c3a?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop',
@@ -108,11 +100,10 @@ const experiences: ExperienceData[] = [
     company: 'Applied Brain Research',
     title: 'Backend Developer',
     period: 'Sep. 2020 - Dec. 2020',
-    description: ['Python, Websockets, Benchmarking.'],
+    overview: 'Python, Websockets, Benchmarking.',
     logo: './src/media/about/ABR.PNG',
     image: 'https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29tcGFueSUyMG9mZmljZXxlbnwxfHx8fDE3Njk1MTIzMjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Designed and implemented real-time computer vision algorithms for object detection and tracking, and benchmarked websocket communication for low-latency data transfer.',
       responsibilities: [
         'Design and implement real-time computer vision algorithms for object detection and tracking',
         'Benchmarking websocket communication for low-latency data transfer',
@@ -121,7 +112,7 @@ const experiences: ExperienceData[] = [
         'An achievement',
       ],
       technologies: ['ROS2', 'Python', 'C++', 'OpenCV', 'PyTorch', 'CUDA', 'PCL'],
-      media: [
+      images: [
         'https://images.unsplash.com/photo-1593568305252-1b8a33ac4f22?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1554941426-47d681795c3a?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop',
@@ -133,11 +124,10 @@ const experiences: ExperienceData[] = [
     company: 'Deep Trekker Inc.',
     title: 'Fullstack Software Developer',
     period: '2019 - 2021',
-    description: ['Developed QtQuick GUI Application for Embedded Linux Remote Control used with underwater remotely operated vehicles.'],
+    overview: 'Developed QtQuick GUI Application for Embedded Linux Remote Control used with underwater remotely operated vehicles.',
     logo: './src/media/about/DeepTrekkerOld.PNG',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Developed QtQuick GUI Application for Embedded Linux Remote Control used in interfacing with underwater remotely operated vehicles.',
       responsibilities: [
         'Developed QtQuick GUI Application for Embedded Linux Remote Control used in interfacing with underwater remotely operated vehicles.',
         'Implemented user-friendly import of mapping data using GPX file format',
@@ -151,7 +141,7 @@ const experiences: ExperienceData[] = [
         'Developed auto-exposure algorithm that works in extreme lighting conditions',
       ],
       technologies: ['C', 'ARM Cortex', 'IMU Sensors', 'PID Control', 'Image Processing'],
-      media: [
+      images: [
         'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&h=300&fit=crop',
       ],
@@ -161,11 +151,10 @@ const experiences: ExperienceData[] = [
     company: 'Cynorix - Cyber Security Startup',
     title: 'Cyber Security Software Developer',
     period: 'May 2019 - Aug. 2019',
-    description: ['Developed secure file storage and authentication system for a cybersecurity startup, utilizing AES-256 encryption and MongoDB for data management.'],
+    overview: 'Developed secure file storage and authentication system for a cybersecurity startup, utilizing AES-256 encryption and MongoDB for data management.',
     logo: './src/media/about/Cynorix.jpg',
     image: 'https://images.unsplash.com/photo-1724627561609-9cd3facba8d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW1lcmElMjB0ZWNobm9sb2d5JTIwbGVuc3xlbnwxfHx8fDE3Njk1NzY0Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Developed secure file storage and authentication system for a cybersecurity startup, utilizing AES-256 encryption and MongoDB for data management.',
       responsibilities: [
         "Extensively worked with MongoDB, Express.js, Node.js and WPF for user authentication, AES-256 data encryption, and large file storage using GridFS",
         "Redesigned automatic 2-factor-authentication (2FA), reducing setup time by 25%",
@@ -178,7 +167,7 @@ const experiences: ExperienceData[] = [
         'Contributed to open-source autonomous driving frameworks',
       ],
       technologies: ['ROS', 'Python', 'TensorFlow', 'Stereo Vision', 'Kalman Filters'],
-      media: [
+      images: [
         'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop',
         'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop',
@@ -187,105 +176,87 @@ const experiences: ExperienceData[] = [
   },
 ];
 
+export function ExperienceSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
+
   return (
-    <section id="experience" className="py-20 bg-zinc-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-16">
-          Experience
-        </h2>
+    <>
+      <section id="experience" className="min-h-screen bg-zinc-950 py-24 px-6 md:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-16">
+              Experience
+            </h2>
 
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-orange-400/30 via-orange-400/50 to-orange-400/30"></div>
-
-          <div className="space-y-12">
-            {experiences.map((exp, index) => {
-              const { ref, isVisible } = useScrollAnimation();
-              return (
-                <div
+            <div className="space-y-8">
+              {experiences.map((exp, index) => (
+                <motion.div
                   key={index}
-                  ref={ref}
-                  className={`relative transition-all duration-1000 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                  }`}
-                  style={{ transitionDelay: `${150}ms` }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  onClick={() => setSelectedExperience(exp)}
+                  className="group cursor-pointer"
                 >
-                  <div className={`flex flex-col md:flex-row gap-8 ${
-                    index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                  }`}>
-                    {/* Timeline Dot */}
-                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-400 rounded-full border-4 border-zinc-950 shadow-lg shadow-orange-400/50 z-10"></div>
+                  <div className="bg-zinc-900 rounded-2xl p-6 border border-zinc-800 hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
+                    <div className="grid md:grid-cols-[auto,1fr,auto] gap-6 items-center">
+                      {/* Logo */}
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 rounded-xl bg-white p-2 flex items-center justify-center">
+                          <img
+                            src={exp.logo}
+                            alt={exp.company}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      </div>
 
-                    {/* Image on one side */}
-                    <div className="flex-1 flex justify-center items-center">
-                      <div className="w-full max-w-sm aspect-video rounded-lg overflow-hidden shadow-lg">
-                        <ImageWithFallback
-                          src={exp.image}
-                          alt={exp.company}
-                          className="w-full h-full object-cover"
-                        />
+                      {/* Content */}
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-bold text-white group-hover:text-orange-500 transition-colors">
+                          {exp.title}
+                        </h3>
+                        <p className="text-orange-500 font-medium">{exp.company}</p>
+                        <p className="text-sm text-zinc-400">{exp.period}</p>
+                        <p className="text-zinc-300 mt-3">{exp.overview}</p>
+                      </div>
+
+                      {/* Image */}
+                      <div className="flex-shrink-0">
+                        <div className="w-48 h-32 rounded-lg overflow-hidden">
+                          <img
+                            src={exp.image}
+                            alt={exp.company}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
                       </div>
                     </div>
 
-                    {/* Content Card on other side */}
-                    <div className="flex-1">
-                      <button
-                        onClick={() => setSelectedExperience(exp)}
-                        className="w-full text-left bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-orange-400/50 
-                                  transition-all hover:shadow-lg hover:shadow-orange-400/10 hover:scale-101 group cursor-pointer"
-                        
-                      >
-                        {/* Company Logo - small */}
-                        <div className="flex items-start gap-4 mb-4">
-                          <div className="w-16 h-16 rounded-lg overflow-hidden bg-zinc-800 flex-shrink-0">
-                            <ImageWithFallback
-                              src={exp.logo}
-                              alt={`${exp.company} logo`}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-xl font-bold mb-1 text-white group-hover:text-orange-400">{exp.title}</h3>
-                            <h4 className="text-orange-400 font-medium">{exp.company}</h4>
-                          </div>
-                        </div>
-
-                        {/* Content */}
-                        <div className="flex flex-wrap gap-4 mb-4 text-gray-400 text-sm">
-                          <div className="flex items-center gap-2">
-                            <Calendar size={16} />
-                            {exp.period}
-                          </div>
-                        </div>
-                        <ul className="space-y-2 mb-4">
-                          {exp.description.map((item, i) => (
-                            <li key={i} className="text-gray-300 flex items-start gap-2">
-                              {/* <span className="text-orange-400">•</span> */}
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <div className="mt-4 flex items-center text-sm text-zinc-400 group-hover:text-orange-400 transition-colors">
-                          <span>View Details</span>
-                          <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                        </div>
-                      </button>
+                    <div className="mt-4 flex items-center text-sm text-zinc-400 group-hover:text-orange-500 transition-colors">
+                      <span>Click to view details</span>
+                      <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Modal */}
-      {selectedExperience && (
-        <ExperienceModal
-          experience={selectedExperience}
-          onClose={() => setSelectedExperience(null)}
-        />
-      )}
-    </section>
+      <ExperienceModal
+        experience={selectedExperience}
+        isOpen={selectedExperience !== null}
+        onClose={() => setSelectedExperience(null)}
+      />
+    </>
   );
 }
