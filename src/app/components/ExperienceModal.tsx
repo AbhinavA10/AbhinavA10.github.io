@@ -63,7 +63,7 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">{experience.title}</h3>
-                <p className="text-orange-500">{experience.company}</p>
+                <p className="text-orange-400">{experience.company}</p>
                 <p className="text-sm text-zinc-400">{experience.period}</p>
               </div>
             </div>

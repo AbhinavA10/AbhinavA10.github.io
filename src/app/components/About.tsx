@@ -41,7 +41,7 @@ export function AboutSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-blue-500/20 rounded-2xl blur-2xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/20 to-blue-500/20 rounded-2xl blur-2xl" />
                 <ImageWithFallback
                   src="https://avatars.githubusercontent.com/u/23727190?v=4"
                   alt="Abhinav Agrahari"
