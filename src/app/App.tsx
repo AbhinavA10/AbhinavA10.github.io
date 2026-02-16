@@ -2,7 +2,7 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/Hero';
 import { AboutSection } from './components/About';
 import { ExperienceSection } from './components/experience-section';
-import { ProjectsSection } from './components/projects-section';
+import { ProjectsSection } from './components/Projects';
 
 export default function App() {
   return (

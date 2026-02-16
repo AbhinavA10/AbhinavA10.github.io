@@ -41,7 +41,7 @@ export function AboutSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-purple-500/20 rounded-2xl blur-2xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-blue-500/20 rounded-2xl blur-2xl" />
                 <ImageWithFallback
                   src="https://avatars.githubusercontent.com/u/23727190?v=4"
                   alt="Abhinav Agrahari"
@@ -79,8 +79,8 @@ export function AboutSection() {
                   key={index}
                   className="flex items-start gap-4 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-all duration-500"
                 >
-                  <div className="p-2 bg-gradient-to-br from-orange-500/10 to-orange-500/10 rounded-lg">
-                    <skill.icon className="text-orange-400"  size={24} />
+                  <div className="p-2 bg-gradient-to-br from-blue-500/10 to-blue-500/10 rounded-lg">
+                    <skill.icon className="text-blue-400"  size={24} />
                   </div>
                   <div>
                     <h3 className="text-lg text-white mb-1">{skill.title}</h3>

@@ -159,7 +159,7 @@ export function ExperienceSection() {
                             />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-2xl mb-1">{exp.title}</h3>
+                            <h3 className="text-2xl mb-1 text-white">{exp.title}</h3>
                             <h4 className="text-orange-400 text-lg">{exp.company}</h4>
                           </div>
                         </div>

@@ -1,7 +1,7 @@
+import { motion, AnimatePresence } from 'motion/react';
 import { X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { ImageLightbox } from './ImageLightbox';
 
 type MediaItem = {
   type: 'image' | 'youtube';
@@ -32,7 +32,7 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -42,32 +42,8 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
     };
   }, []);
 
-  // Extract all image URLs for lightbox navigation
-  const allImages: string[] = [];
-  
-  // Collect images from richContent
-  if (project.richContent) {
-    project.richContent.forEach(block => {
-      if (block.type === 'media' && block.media?.type === 'image') {
-        allImages.push(block.media.url);
-      }
-    });
-  }
-  
-  // Collect images from media array
-  if (project.media) {
-    project.media.forEach(item => {
-      if (item.type === 'image') {
-        allImages.push(item.url);
-      }
-    });
-  }
-
   const handleImageClick = (imageUrl: string) => {
-    const index = allImages.indexOf(imageUrl);
-    if (index !== -1) {
-      setLightboxIndex(index);
-    }
+    setZoomedImage(imageUrl);
   };
 
   const getYouTubeEmbedUrl = (url: string) => {
@@ -82,10 +58,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
   };
 
   return (
-    <div
-      className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm"
-      onClick={onClose}
-    >
+    <>
+      <div
+        className="fixed inset-0 z-50 overflow-y-auto bg-black/80 backdrop-blur-sm"
+        onClick={onClose}
+      >
       <div className="min-h-screen px-4 py-8 flex items-center justify-center">
         <div
           className="relative bg-zinc-900 rounded-lg max-w-7xl w-full border border-zinc-800 shadow-2xl"
@@ -148,8 +125,9 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                         if (block.media.type === 'image') {
                           return (
                             <div key={i} className="my-6">
-                              <div
-                                className="rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                              <motion.div
+                                whileHover={{ scale: 1.02 }}
+                                className="rounded-lg overflow-hidden cursor-zoom-in inline-block w-full"
                                 onClick={() => handleImageClick(block.media!.url)}
                               >
                                 <ImageWithFallback
@@ -157,7 +135,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                                   alt="Project content"
                                   className="w-full h-auto object-cover"
                                 />
-                              </div>
+                              </motion.div>
                             </div>
                           );
                         } else if (block.media.type === 'youtube') {
@@ -213,9 +191,10 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                       {project.media.map((mediaItem, i) => {
                         if (mediaItem.type === 'image') {
                           return (
-                            <div
+                            <motion.div
                               key={i}
-                              className="rounded-lg overflow-hidden aspect-video cursor-pointer hover:opacity-90 transition-opacity"
+                              whileHover={{ scale: 1.02 }}
+                              className="rounded-lg overflow-hidden aspect-video cursor-zoom-in transition-all"
                               onClick={() => handleImageClick(mediaItem.url)}
                             >
                               <ImageWithFallback
@@ -223,7 +202,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                                 alt={`${project.title} screenshot ${i + 1}`}
                                 className="w-full h-full object-cover"
                               />
-                            </div>
+                            </motion.div>
                           );
                         } else if (mediaItem.type === 'youtube') {
                           return (
@@ -287,17 +266,49 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </div>
         </div>
-
-        {/* Image Lightbox */}
-        {lightboxIndex !== null && allImages.length > 0 && (
-          <ImageLightbox
-            images={allImages}
-            currentIndex={lightboxIndex}
-            onClose={() => setLightboxIndex(null)}
-            onNavigate={setLightboxIndex}
-          />
-        )}
       </div>
-    </div>
+      </div>
+
+      {/* Image Zoom Modal - Outside main modal for proper fixed positioning */}
+      <AnimatePresence>
+      {zoomedImage && (
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={(e) => {
+              e.stopPropagation();
+              setZoomedImage(null);
+            }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] cursor-zoom-out"
+          />
+          <div className="fixed inset-0 z-[60] flex items-center justify-center p-8 pointer-events-none">
+            <motion.img
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              src={zoomedImage}
+              alt="Zoomed"
+              className="max-w-full max-h-full object-contain rounded-lg pointer-events-auto cursor-zoom-out"
+              onClick={(e) => {
+                e.stopPropagation();
+                setZoomedImage(null);
+              }}
+            />
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setZoomedImage(null);
+              }}
+              className="absolute top-4 right-4 text-white hover:text-zinc-400 transition-colors pointer-events-auto"
+            >
+              <X size={32} />
+            </button>
+          </div>
+        </>
+      )}
+    </AnimatePresence>
+    </>
   );
 }

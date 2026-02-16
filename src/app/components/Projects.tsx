@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
-import { ProjectModal } from './project-modal2';
+import { ProjectModal } from './ProjectModal';
 
 type Category = 'All' | 'Autonomous Systems' | 'Computer Vision' | 'Manipulation';
 
@@ -49,7 +49,7 @@ export function ProjectsSection() {
       image:
         'https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGFybSUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzY5MzI4NDc3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       category: 'Autonomous Systems',
-      tags: ['ROS', 'Python', 'SLAM', 'Navigation'],
+      tags: ['ROS', 'Python', 'SLAM', 'Navigation', 'Navigation2'],
       github: 'https://github.com',
       hasModal: true,
       longDescription:
@@ -198,12 +198,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 bg-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2
-          ref={titleRef}
-          className={`text-4xl mb-12 text-center text-white transition-all duration-1000 ${
-            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
           Projects
         </h2>
 
@@ -250,7 +245,7 @@ export function ProjectsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent opacity-60"></div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl text-white mb-2">{project.title}</h3>
+                <h3 className="text-xl text-white font-bold mb-2">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, i) => (
@@ -265,13 +260,13 @@ export function ProjectsSection() {
                 <div className="flex gap-3">
                   {project.hasModal ? (
                     <div className="flex items-center gap-2 text-gray-400 group-hover:text-blue-400 transition-colors">
-                      <ExternalLink size={18} />
                       <span className="text-sm">View Details</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
                     </div>
                   ) : (
                     <div className="flex items-center gap-2 text-gray-400 group-hover:text-blue-400 transition-colors">
-                      <Github size={18} />
-                      <span className="text-sm">View Code</span>
+                      <span className="text-sm">View on Github</span>
+                      <span className="group-hover:translate-x-1 transition-transform"><ExternalLink size={18} /></span>
                     </div>
                   )}
                 </div>
