@@ -1,6 +1,6 @@
-import { Navbar } from './components/navbar';
-import { HeroSection } from './components/hero-section';
-import { AboutSection } from './components/about-section';
+import { Navbar } from './components/Navbar';
+import { HeroSection } from './components/Hero';
+import { AboutSection } from './components/About';
 import { ExperienceSection } from './components/experience-section';
 import { ProjectsSection } from './components/projects-section';
 
