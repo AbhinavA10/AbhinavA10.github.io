@@ -22,6 +22,7 @@ interface ExperienceData {
 
 export function ExperienceSection() {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const { ref: timelineRef, isVisible: timelineVisible } = useScrollAnimation();
   const [selectedExperience, setSelectedExperience] = useState<ExperienceData | null>(null);
 
 const experiences: ExperienceData[] = [
@@ -190,13 +191,20 @@ const experiences: ExperienceData[] = [
   return (
     <section id="experience" className="py-20 bg-zinc-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-16">
+        <h2
+          ref={titleRef}
+          className={`text-4xl md:text-5xl font-bold text-white mb-16 transition-all duration-1000 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           Experience
         </h2>
 
-        <div className="relative">
+        <div className="relative" ref={timelineRef}>
           {/* Timeline Line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-orange-400/30 via-orange-400/50 to-orange-400/30"></div>
+          <div className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-orange-400/30 via-orange-400/50 to-orange-400/30 transition-all duration-1000 delay-200 ${
+            timelineVisible ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0'
+          }`} style={{ transformOrigin: 'top' }}></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => {

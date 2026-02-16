@@ -39,6 +39,7 @@ export function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
   const { ref: filterRef, isVisible: filterVisible } = useScrollAnimation();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation();
 
   const projects: Project[] = [
     {
@@ -198,7 +199,12 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 bg-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+        <h2
+          ref={titleRef}
+          className={`text-4xl md:text-5xl font-bold text-white mb-8 transition-all duration-1000 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           Projects
         </h2>
 
@@ -225,7 +231,12 @@ export function ProjectsSection() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          ref={gridRef}
+          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-1000 delay-300 ${
+            gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           {filteredProjects.map((project, index) => (
             <a
               key={project.id}
@@ -233,8 +244,7 @@ export function ProjectsSection() {
               target={project.hasModal ? undefined : '_blank'}
               rel={project.hasModal ? undefined : 'noopener noreferrer'}
               onClick={(e) => handleProjectClick(project, e)}
-              className="bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800 hover:border-blue-500/50 transition-all hover:transform hover:scale-105 group cursor-pointer animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="bg-zinc-950 rounded-lg overflow-hidden border border-zinc-800 hover:border-blue-500/50 transition-all hover:transform hover:scale-105 group cursor-pointer"
             >
               <div className="relative h-48 overflow-hidden">
                 <ImageWithFallback
