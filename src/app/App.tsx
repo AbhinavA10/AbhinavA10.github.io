@@ -1,7 +1,7 @@
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/Hero';
 import { AboutSection } from './components/About';
-import { ExperienceSection } from './components/experience-section';
+import { ExperienceSection } from './components/Experience';
 import { ProjectsSection } from './components/Projects';
 
 export default function App() {

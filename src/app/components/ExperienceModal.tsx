@@ -6,7 +6,6 @@ interface ExperienceModalProps {
   experience: {
     title: string;
     company: string;
-    location: string;
     period: string;
     logo: string;
     image: string;
@@ -38,71 +37,47 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
           className="relative bg-zinc-900 rounded-lg max-w-6xl w-full border border-zinc-800 shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Close Button */}
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 z-10 p-2 bg-zinc-800 rounded-full hover:bg-zinc-700 transition-colors"
-          >
-            <X size={20} className="text-gray-300" />
-          </button>
-
-          {/* Hero Section */}
-          <div className="relative">
-            <div className="h-48 overflow-hidden rounded-t-lg">
-              <ImageWithFallback
-                src={experience.image}
+          {/* Header */}
+          <div className="top-0 bg-zinc-900/95 backdrop-blur-lg border-b border-zinc-800 p-6 flex items-start justify-between">
+            <div className="flex items-center gap-4">
+              <img
+                src={experience.logo}
                 alt={experience.company}
-                className="w-full h-full object-cover"
+                className="w-12 h-12 rounded-lg object-contain bg-white p-2"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
-            </div>
-            
-            {/* Company Logo Overlay */}
-            <div className="absolute bottom-0 left-8 transform translate-y-1/2">
-              <div className="w-24 h-24 rounded-lg overflow-hidden bg-zinc-800 border-4 border-zinc-900">
-                <ImageWithFallback
-                  src={experience.logo}
-                  alt={`${experience.company} logo`}
-                  className="w-full h-full object-cover"
-                />
+              <div>
+                <h3 className="text-2xl font-bold text-white">{experience.title}</h3>
+                <p className="text-orange-500">{experience.company}</p>
+                <p className="text-sm text-zinc-400">{experience.period}</p>
               </div>
             </div>
+            {/* Close Button */}
+            <button
+              onClick={onClose}
+              className="text-zinc-400 hover:text-white transition-colors"
+            >
+              <X size={24} />
+            </button>
           </div>
 
           {/* Content */}
           <div className="p-6 md:p-8 pt-16">
-            <div className="mb-6">
-              <h2 className="text-3xl md:text-4xl mb-2 text-white">
-                {experience.title}
-              </h2>
-              <h3 className="text-orange-400 text-2xl mb-4">{experience.company}</h3>
-              <div className="flex flex-wrap gap-4 text-gray-400">
-                <div className="flex items-center gap-2">
-                  <MapPin size={18} />
-                  {experience.location}
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar size={18} />
-                  {experience.period}
-                </div>
-              </div>
-            </div>
-
+            
             {/* Long Description */}
             {experience.longDescription && (
               <div className="mb-6">
-                <h3 className="text-xl mb-3 text-orange-400">Role Overview</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">Role Overview</h3>
                 <p className="text-gray-300 leading-relaxed">{experience.longDescription}</p>
               </div>
             )}
 
             {/* Key Responsibilities */}
             <div className="mb-6">
-              <h3 className="text-xl mb-3 text-orange-400">Key Responsibilities</h3>
+              <h3 className="text-xl mb-3 text-white">Key Responsibilities</h3>
               <ul className="space-y-2">
                 {experience.description.map((item, i) => (
                   <li key={i} className="text-gray-300 flex items-start gap-2">
-                    <span className="text-orange-400 mt-1">•</span>
+                    <span className="text-white mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -112,11 +87,11 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
             {/* Achievements */}
             {experience.achievements && experience.achievements.length > 0 && (
               <div className="mb-6">
-                <h3 className="text-xl mb-3 text-orange-400">Key Achievements</h3>
+                <h3 className="text-xl mb-3 text-white">Key Achievements</h3>
                 <ul className="space-y-2">
                   {experience.achievements.map((achievement, i) => (
                     <li key={i} className="text-gray-300 flex items-start gap-2">
-                      <span className="text-orange-400 mt-1">✓</span>
+                      <span className="text-white mt-1">✓</span>
                       <span>{achievement}</span>
                     </li>
                   ))}
@@ -127,7 +102,7 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
             {/* Technologies */}
             {experience.technologies && experience.technologies.length > 0 && (
               <div className="mb-6">
-                <h3 className="text-xl mb-3 text-orange-400">Technologies & Tools</h3>
+                <h3 className="text-xl mb-3 text-white">Technologies & Tools</h3>
                 <div className="flex flex-wrap gap-2">
                   {experience.technologies.map((tech, i) => (
                     <span
@@ -144,7 +119,7 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
             {/* Media Gallery */}
             {experience.media && experience.media.length > 0 && (
               <div className="mb-6">
-                <h3 className="text-xl mb-3 text-orange-400">Gallery</h3>
+                <h3 className="text-xl mb-3 text-white">Gallery</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {experience.media.map((mediaUrl, i) => (
                     <div key={i} className="rounded-lg overflow-hidden aspect-video">
