@@ -72,7 +72,7 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
           {/* Content */}
           <div className="p-6 md:p-8 pt-16">
             <div className="mb-6">
-              <h2 className="text-3xl md:text-4xl mb-2">
+              <h2 className="text-3xl md:text-4xl mb-2 text-white">
                 {experience.title}
               </h2>
               <h3 className="text-orange-400 text-2xl mb-4">{experience.company}</h3>

@@ -61,7 +61,7 @@ export function ExperienceModal({ experience, isOpen, onClose }: ExperienceModal
                   {/* Description */}
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Role Overview</h4>
-                    <p className="text-zinc-300 leading-relaxed">{experience.description}</p>
+                    <p className="text-zinc-300 leading-relaxed">{experience.overview}</p>
                   </div>
 
                   {/* Responsibilities */}

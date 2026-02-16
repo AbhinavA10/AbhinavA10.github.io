@@ -1,0 +1,9 @@
+```
+I would like to make a modern dark themed personal portofolio page for me. I am a robotics and camera engineer. Some sections that should be included are: a large main landing area, with a big video of me at work on loop and my name/title overlayed on the left side. (want my name to be the header, subtitle to be my position in orange, and a smaller text for the tagline) then an about me section with a headshot, then a past employment / experience section, then a filterable projects section.
+
+I want to make the nav bar smaller and centered, very minimal once the user scrolls past the hero section. Can you add some animations as I scroll down, to make the web page seem more dynamic and responsive? Same for filtering projects.
+
+In the experience section, addspace for a small company logo and a picture for each company to even the page. For each employer, also add a clickable modal to open more details and more pictures in the past employer section for each employer, 
+Make each project a clickable tile as well that either links to GitHub or opens a modal with more details and pictures / youtube video without a carousel. The goal is to give details, discuss the project, and show more media about the project.  In the project modal, I want to be able to click on one of the pictures in the gallery and have it zoom in / enlarge for easy viewing. 
+On some project modal pages, I also want to be able to embed youtube iframes in the gallery, or embed youtube videos and pictures in between paragraphs of text, so the modal flows more like a blog post.
+```

@@ -78,10 +78,9 @@ export function AboutSection() {
                 <div
                   key={index}
                   className="flex items-start gap-4 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-800 transition-all duration-500"
-                  style={{ transitionDelay: `${400 + index * 100}ms` }}
                 >
                   <div className="p-2 bg-gradient-to-br from-orange-500/10 to-orange-500/10 rounded-lg">
-                    <skill.icon className="text-orange-400" size={24} />
+                    <skill.icon className="text-orange-400"  size={24} />
                   </div>
                   <div>
                     <h3 className="text-lg text-white mb-1">{skill.title}</h3>

@@ -22,10 +22,10 @@ export interface Experience {
 const experiences: Experience[] = [
   {
     title: 'Robotics Systems & Perception Engineer',
-    company: 'Deep Trekker',
+    company: 'Deep Trekker Inc.',
     period: '2023 - Present',
     overview: 'Developed advanced camera systems and gimbal stabilization for commercial drones.',
-    logo: './src/media/about/DeepTrekker.PNG',
+    logo: './src/media/about/DeepTrekker.jpg',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
       responsibilities: [
@@ -47,11 +47,11 @@ const experiences: Experience[] = [
     },
   },
   {
-    company: 'Deep Trekker',
+    company: 'Deep Trekker Inc.',
     title: 'Autonomy Software Co-op',
     period: 'Jan. 2022 - Aug. 2022',
     overview: 'Developed advanced camera systems and gimbal stabilization for commercial drones.',
-    logo: './src/media/about/DeepTrekker.PNG',
+    logo: './src/media/about/DeepTrekkerOld.PNG',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
       responsibilities: [
@@ -77,7 +77,7 @@ const experiences: Experience[] = [
     title: 'Deep Learning Application Developer',
     period: 'May 2021 - Aug. 2021',
     overview: 'Python, Websockets, Benchmarking.',
-    logo: './src/media/about/AppliedBrainResearch.jpg',
+    logo: './src/media/about/ABR.PNG',
     image: 'https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29tcGFueSUyMG9mZmljZXxlbnwxfHx8fDE3Njk1MTIzMjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
       responsibilities: [
@@ -101,7 +101,7 @@ const experiences: Experience[] = [
     title: 'Backend Developer',
     period: 'Sep. 2020 - Dec. 2020',
     overview: 'Python, Websockets, Benchmarking.',
-    logo: './src/media/about/AppliedBrainResearch.jpg',
+    logo: './src/media/about/ABR.PNG',
     image: 'https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29tcGFueSUyMG9mZmljZXxlbnwxfHx8fDE3Njk1MTIzMjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
       responsibilities: [
@@ -121,11 +121,11 @@ const experiences: Experience[] = [
     },
   },
   {
-    company: 'Deep Trekker',
+    company: 'Deep Trekker Inc.',
     title: 'Fullstack Software Developer',
     period: '2019 - 2021',
     overview: 'Developed QtQuick GUI Application for Embedded Linux Remote Control used with underwater remotely operated vehicles.',
-    logo: './src/media/about/DeepTrekker.PNG',
+    logo: './src/media/about/DeepTrekkerOld.PNG',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
       responsibilities: [
@@ -148,7 +148,7 @@ const experiences: Experience[] = [
     },
   },
   {
-    company: 'Cynorix',
+    company: 'Cynorix - Cyber Security Startup',
     title: 'Cyber Security Software Developer',
     period: 'May 2019 - Aug. 2019',
     overview: 'Developed secure file storage and authentication system for a cybersecurity startup, utilizing AES-256 encryption and MongoDB for data management.',
