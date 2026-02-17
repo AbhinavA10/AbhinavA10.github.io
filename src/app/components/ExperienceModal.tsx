@@ -10,15 +10,19 @@ interface ExperienceData {
   period: string;
   logo: string;
   image: string;
-  description: string[];
+  overview: string[];
   details?: {
-    overview?: string;
     responsibilities?: string[];
     achievements?: string[];
     technologies?: string[];
-    media?: string[];
+    media?: MediaItem[];
   };
 }
+
+type MediaItem = {
+  type: 'image' | 'youtube';
+  url: string;
+};
 
 interface ExperienceModalProps {
   experience: ExperienceData;
@@ -38,6 +42,16 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
 
   const handleImageClick = (imageUrl: string) => {
     setZoomedImage(imageUrl);
+  };
+
+  const getYouTubeEmbedUrl = (url: string) => {
+    const videoIdMatch = url.match(
+      /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/
+    );
+    if (videoIdMatch) {
+      return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
+    }
+    return url;
   };
 
   return (
@@ -80,19 +94,19 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
           <div className="p-6 md:p-8 pt-16">
             
             {/* Long Description */}
-            {experience.details?.overview && (
+            {experience.overview && (
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-white mb-3">Role Overview</h3>
-                <p className="text-gray-300 leading-relaxed">{experience.details.overview}</p>
+                <p className="text-gray-300 leading-relaxed">{experience.overview}</p>
               </div>
             )}
 
             {/* Key Responsibilities */}
-            {(experience.details?.responsibilities || experience.description) && (
+            {(experience.details?.responsibilities || experience.overview) && (
               <div className="mb-6">
                 <h3 className="text-xl mb-3 text-white">Key Responsibilities</h3>
                 <ul className="space-y-2">
-                  {(experience.details?.responsibilities || experience.description).map((item, i) => (
+                  {(experience.details?.responsibilities || experience.overview).map((item, i) => (
                     <li key={i} className="text-gray-300 flex items-start gap-2">
                       <span className="text-white">•</span>
                       <span>{item}</span>
@@ -139,20 +153,35 @@ export function ExperienceModal({ experience, onClose }: ExperienceModalProps) {
               <div className="mb-6">
                 <h3 className="text-xl mb-3 text-white">Gallery</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {experience.details.media.map((mediaUrl, i) => (
-                    <motion.div
-                      key={i}
-                      whileHover={{ scale: 1.02 }}
-                      className="rounded-lg overflow-hidden aspect-video cursor-zoom-in transition-all"
-                      onClick={() => handleImageClick(mediaUrl)}
-                    >
-                      <ImageWithFallback
-                        src={mediaUrl}
-                        alt={`${experience.company} image ${i + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </motion.div>
-                  ))}
+                  {experience.details.media.map((mediaItem, i) => {
+                    if (mediaItem.type === 'image') {
+                      return (
+                        <motion.div
+                          key={i}
+                          whileHover={{ scale: 1.02 }}
+                          className="rounded-lg overflow-hidden aspect-video cursor-zoom-in transition-all"
+                          onClick={() => handleImageClick(mediaItem.url)}
+                        >
+                          <ImageWithFallback
+                            src={mediaItem.url}
+                            alt={`${experience.company} image ${i + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </motion.div>
+                      );
+                    }
+
+                    return (
+                      <div key={i} className="rounded-lg overflow-hidden aspect-video">
+                        <iframe
+                          src={getYouTubeEmbedUrl(mediaItem.url)}
+                          className="w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             )}

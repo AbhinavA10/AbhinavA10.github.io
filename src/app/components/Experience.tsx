@@ -10,15 +10,19 @@ interface ExperienceData {
   period: string;
   logo: string;
   image: string;
-  description: string[];
+  overview: string[];
   details?: {
-    overview?: string;
     responsibilities?: string[];
     achievements?: string[];
     technologies?: string[];
-    media?: string[];
+    media?: MediaItem[];
   };
 }
+
+type MediaItem = {
+  type: 'image' | 'youtube';
+  url: string;
+};
 
 export function ExperienceSection() {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
@@ -30,53 +34,49 @@ const experiences: ExperienceData[] = [
     title: 'Robotics Systems & Perception Engineer',
     company: 'Deep Trekker Inc.',
     period: '2023 - Present',
-    description: ['Developed advanced camera systems and gimbal stabilization for commercial drones.'],
+    overview: ['Developing advanced perception and SLAM technologies for underwater robotics.'],
     logo: './src/media/about/DeepTrekker.jpg',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Developed advanced camera systems and gimbal stabilization for commercial drones.',
       responsibilities: [
-        'Design optical systems for aerial photography and videography',
+        'Design optical systems for photography and videography',
         'Develop embedded software for camera control and image processing',
-        'Implement real-time image stabilization algorithms',
-        'Calibrate and tune gimbal control systems',
+        'Implement real-time image dehazing algorithms',
+        'Calibrate stereo camera system',
       ],
       achievements: [
-        'Improved image stabilization performance by 60%',
-        'Reduced camera system weight by 25% while maintaining image quality',
-        'Developed auto-exposure algorithm that works in extreme lighting conditions',
+        'Work featured in several YouTube videos and industry publications',
       ],
-      technologies: ['ROS', 'Python', 'C++', 'Docker', 'TensorFlow', 'OpenCV', 'Git'],
+      technologies: ['ROS', 'Python', 'C++', 'Docker', 'CUDA', 'NiTROS', 'OpenCV', 'NVIDIA Jetson'],
       media: [
-        'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&h=300&fit=crop',
+        { type: 'youtube', url: 'https://www.youtube.com/watch?v=nMFU32iFgj8' },
+        { type: 'youtube', url: 'https://www.youtube.com/watch?v=F8W1ytepens' },
+        { type: 'youtube', url: 'https://www.youtube.com/watch?v=jwBjfzmmdms' },
+        { type: 'youtube', url: 'https://www.youtube.com/watch?v=EAVMgzmOxUY' },
+        { type: 'youtube', url: 'https://www.youtube.com/watch?v=xLSt1IeJsv8' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop' },
       ],
     },
   },
   {
     company: 'Deep Trekker Inc.',
-    title: 'Autonomy Software Co-op',
+    title: 'Autonomy Systems Engineering Co-op',
     period: 'Jan. 2022 - Aug. 2022',
-    description: ['Developed advanced camera systems and gimbal stabilization for commercial drones.'],
+    overview: ['Prototyped perception and embedded systems for underwater robotics.'],
     logo: './src/media/about/DeepTrekkerOld.PNG',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Developed advanced camera systems and gimbal stabilization for commercial drones.',
       responsibilities: [
-        'Design optical systems for aerial photography and videography',
-        'Develop embedded software for camera control and image processing',
-        'Implement real-time image stabilization algorithms',
-        'Calibrate and tune gimbal control systems',
+        'Robotics, Embedded Systems, Controls, Sensor Integration',
+        'Investigated Stereo Camera. High-End IMUs, and other Perception technologies',
       ],
       achievements: [
-        'Improved image stabilization performance by 60%',
-        'Reduced camera system weight by 25% while maintaining image quality',
-        'Developed auto-exposure algorithm that works in extreme lighting conditions',
+        'An achievement',
       ],
-      technologies: ['C', 'ARM Cortex', 'IMU Sensors', 'PID Control', 'Image Processing'],
+      technologies: ['PCL', 'C++', 'C', 'STM32', ],
       media: [
-        'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&h=300&fit=crop',
+        { type: 'image', url: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&h=300&fit=crop' },
       ],
     },
   },
@@ -84,24 +84,25 @@ const experiences: ExperienceData[] = [
     company: 'Applied Brain Research',
     title: 'Deep Learning Application Developer',
     period: 'May 2021 - Aug. 2021',
-    description: ['Python, Websockets, Benchmarking.'],
+    overview: ['Developed and maintained a cloud service for training low-power Keyword Spotter machine learning models (RNN), deployable on embedded microcontrollers.'],
     logo: './src/media/about/ABR.PNG',
     image: 'https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29tcGFueSUyMG9mZmljZXxlbnwxfHx8fDE3Njk1MTIzMjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Designed and implemented real-time computer vision algorithms for object detection and tracking, and benchmarked websocket communication for low-latency data transfer.',
       responsibilities: [
-        'Design and implement real-time computer vision algorithms for object detection and tracking',
-        'Benchmarking websocket communication for low-latency data transfer',
+        'Contributed to a cloud service for training low-power Keyword Spotter machine learning models (RNN), deployable on embedded microcontrollers.',
+        'Gained in-depth exposure to TensorFlow ecosystem, model training, and model deployment for edge-AI devices using TFLite',
+        'Performed Root-cause analysis to improve accuracy of quantization aware trained ML models in TensorFlow',
+        'Created and executed automated unit and integration tests using Python and Pytest. Developed robust code through functional and regression tests',
       ],
       achievements: [
         'An achievement',
       ],
       technologies: ['ROS2', 'Python', 'C++', 'OpenCV', 'PyTorch', 'CUDA', 'PCL'],
       media: [
-        'https://images.unsplash.com/photo-1593568305252-1b8a33ac4f22?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1554941426-47d681795c3a?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=300&fit=crop',
+        { type: 'image', url: 'https://images.unsplash.com/photo-1593568305252-1b8a33ac4f22?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1554941426-47d681795c3a?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=300&fit=crop' },
       ],
     },
   },
@@ -109,52 +110,56 @@ const experiences: ExperienceData[] = [
     company: 'Applied Brain Research',
     title: 'Backend Developer',
     period: 'Sep. 2020 - Dec. 2020',
-    description: ['Python, Websockets, Benchmarking.'],
+    overview: ['Developed Python backend for interactive visualizer of spiking neural networks. Benchmarked performance of several frameworks for low-latency WebSocket communication.'],
     logo: './src/media/about/ABR.PNG',
     image: 'https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwY29tcGFueSUyMG9mZmljZXxlbnwxfHx8fDE3Njk1MTIzMjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Designed and implemented real-time computer vision algorithms for object detection and tracking, and benchmarked websocket communication for low-latency data transfer.',
       responsibilities: [
-        'Design and implement real-time computer vision algorithms for object detection and tracking',
-        'Benchmarking websocket communication for low-latency data transfer',
+        'Developed Python backend for browser-based interactive visualizer of spiking neural networks, including their structure and spiking activity',
+        'Benchmarked performance of several asynchronous Python web frameworks for low-latency WebSocket usage: Aiohttp, Autobahn, Tornado, Sanic, and Starlette',
+        'Prototyped use of Protobuf and Flatbuffer for increasing data transfer throughput',
+        'Deployed and secured remote server on Ubuntu-based Digital Ocean droplet.',
+        'Created HTML5 client for automatic data collection using VanillaJS, BootStrap',
+        'Analyzed benchmarking data using pandas, seaborn, and Jupyter Notebooks. Findings have up to 36% reduction in latency per connection.',
+
       ],
       achievements: [
         'An achievement',
       ],
       technologies: ['ROS2', 'Python', 'C++', 'OpenCV', 'PyTorch', 'CUDA', 'PCL'],
       media: [
-        'https://images.unsplash.com/photo-1593568305252-1b8a33ac4f22?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1554941426-47d681795c3a?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=300&fit=crop',
+        { type: 'image', url: 'https://images.unsplash.com/photo-1593568305252-1b8a33ac4f22?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1554941426-47d681795c3a?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=300&fit=crop' },
       ],
     },
   },
   {
     company: 'Deep Trekker Inc.',
     title: 'Fullstack Software Developer',
-    period: '2019 - 2021',
-    description: ['Developed QtQuick GUI Application for Embedded Linux Remote Control used with underwater remotely operated vehicles.'],
+    period: 'Jan. 2020 – Aug. 2020',
+    overview: ['Developed QtQuick GUI Application for Embedded Linux Remote Control used with underwater remotely operated vehicles.'],
     logo: './src/media/about/DeepTrekkerOld.PNG',
     image: 'https://images.unsplash.com/photo-1762478237936-187fa02b9c69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMGFlcmlhbCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzY5NTc2NDMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Developed QtQuick GUI Application for Embedded Linux Remote Control used in interfacing with underwater remotely operated vehicles.',
       responsibilities: [
-        'Developed QtQuick GUI Application for Embedded Linux Remote Control used in interfacing with underwater remotely operated vehicles.',
+        'Developed QtQuick (C++) GUI Application for Embedded Linux device used to interface with remotely operated underwater vehicles and IoT devices',
         'Implemented user-friendly import of mapping data using GPX file format',
         'Debugged TCP/IP communication issues using tcpdump and Wireshark',
-        'Created performance profiling Bash scripts; Implemented efficient MVC practices reducing CPU usage by 23%',
-        'Currently prototyping PWA with communication over WebSockets for IoT devices',
+        'Implemented efficient MVC patterns, reducing CPU usage by 23% and page load time by 95%; Created performance-profiling Bash scripts',
+        'Implemented ONVIF protocol in Python to communicate with PTZ IP Cameras. ',
+        'Interfaced Python and multithreaded C++ applications using UNIX IPC',
       ],
       achievements: [
         'Improved image stabilization performance by 60%',
         'Reduced camera system weight by 25% while maintaining image quality',
         'Developed auto-exposure algorithm that works in extreme lighting conditions',
       ],
-      technologies: ['C', 'ARM Cortex', 'IMU Sensors', 'PID Control', 'Image Processing'],
+      technologies: ['QtQuick', 'C++', 'Python', 'TCP/IP', 'GPX', 'ONVIF', 'UNIX IPC', 'Bash'],
       media: [
-        'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&h=300&fit=crop',
+        { type: 'image', url: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&h=300&fit=crop' },
       ],
     },
   },
@@ -162,11 +167,10 @@ const experiences: ExperienceData[] = [
     company: 'Cynorix - Cyber Security Startup',
     title: 'Cyber Security Software Developer',
     period: 'May 2019 - Aug. 2019',
-    description: ['Developed secure file storage and authentication system for a cybersecurity startup, utilizing AES-256 encryption and MongoDB for data management.'],
+    overview: ['Developed secure file storage and authentication system for a cybersecurity startup, utilizing AES-256 encryption and MongoDB for data management.'],
     logo: './src/media/about/Cynorix.jpg',
     image: 'https://images.unsplash.com/photo-1724627561609-9cd3facba8d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW1lcmElMjB0ZWNobm9sb2d5JTIwbGVuc3xlbnwxfHx8fDE3Njk1NzY0Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: {
-      overview: 'Developed secure file storage and authentication system for a cybersecurity startup, utilizing AES-256 encryption and MongoDB for data management.',
       responsibilities: [
         "Extensively worked with MongoDB, Express.js, Node.js and WPF for user authentication, AES-256 data encryption, and large file storage using GridFS",
         "Redesigned automatic 2-factor-authentication (2FA), reducing setup time by 25%",
@@ -178,11 +182,11 @@ const experiences: ExperienceData[] = [
         'Developed a novel stereo vision algorithm for depth estimation',
         'Contributed to open-source autonomous driving frameworks',
       ],
-      technologies: ['ROS', 'Python', 'TensorFlow', 'Stereo Vision', 'Kalman Filters'],
+      technologies: ['MongoDB', 'Express.js', 'Node.js', 'WPF', 'AES-256 Encryption', 'Gulp.js', 'Microsoft Azure'],
       media: [
-        'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop',
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop',
+        { type: 'image', url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop' },
+        { type: 'image', url: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop' },
       ],
     },
   },
@@ -218,11 +222,11 @@ const experiences: ExperienceData[] = [
                   }`}
                   style={{ transitionDelay: `${150}ms` }}
                 >
-                  <div className={`flex flex-col md:flex-row gap-8 ${
+                  <div className={`flex flex-col md:flex-row gap-18 ${
                     index % 2 === 0 ? 'md:flex-row-reverse' : ''
                   }`}>
                     {/* Timeline Dot */}
-                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-400 rounded-full border-4 border-zinc-950 shadow-lg shadow-orange-400/50 z-10"></div>
+                    <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-orange-400 rounded-full border-4 border-zinc-950 shadow-lg shadow-orange-400/50 z-10"></div>
 
                     {/* Image on one side */}
                     <div className="flex-1 flex justify-center items-center">
@@ -266,7 +270,7 @@ const experiences: ExperienceData[] = [
                           </div>
                         </div>
                         <ul className="space-y-2 mb-4">
-                          {exp.description.map((item, i) => (
+                          {exp.overview.map((item, i) => (
                             <li key={i} className="text-gray-300 flex items-start gap-2">
                               {/* <span className="text-orange-400">•</span> */}
                               <span>{item}</span>
